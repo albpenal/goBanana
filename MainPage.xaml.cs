@@ -28,8 +28,9 @@ namespace goBanana
         }
         private void IncreaseBanana_Click(object sender, RoutedEventArgs e)
         {
-            int numeroActual = int.Parse(BananaCount.Text);
-            BananaCount.Text = (numeroActual + 1).ToString();
+            int num = int.Parse(BananaCount.Text);
+            BananaCount.Text = (num + 1).ToString();
+            ClickHere.Visibility = Visibility.Collapsed;
         }
     }
 }

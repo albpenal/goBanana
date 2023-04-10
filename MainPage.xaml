@@ -8,8 +8,21 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     Width="1280" Height="720">
-    
-    
+
+    <Page.Resources>
+        <Style x:Key="MyButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FEDD5F"/>
+            <Setter Property="BorderBrush" Value="#FECD13"/>
+            <Setter Property="BorderThickness" Value="5"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Width" Value="140"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+    </Page.Resources>
+
     <Grid>
 
         <!--<Grid.RowDefinitions>
@@ -26,16 +39,16 @@
         <Image Source="/Assets/background.png" Stretch="Fill" Grid.ColumnSpan="3"/>
 
         <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center"
-                    VerticalAlignment="Top" Margin="0,20,0,0" Spacing="100" Height="32" Width="416">
-            <Button Content="JUEGO" />
-            <Button Content="SKINS"  />
-            <Button Content="GLOSARIO" />
+                    VerticalAlignment="Top" Margin="15,20,0,0" Spacing="35" Height="80" Width="520">
+            <Button Content="JUEGO" Style="{StaticResource MyButtonStyle}"/>
+            <Button Content="SKINS"  Style="{StaticResource MyButtonStyle}"/>
+            <Button Content="GLOSARIO" Style="{StaticResource MyButtonStyle}"/>
         </StackPanel>
 
         <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Bottom"
-                    HorizontalAlignment="Center" Spacing="100" Margin="20" Height="32" Width="246">
-            <Button Content="OPCIONES" />
-            <Button Content="INFO"  />
+                    HorizontalAlignment="Center" Spacing="10" Margin="20" Height="72" Width="288">
+            <Button Content="OPCIONES" Style="{StaticResource MyButtonStyle}"/>
+            <Button Content="INFO" Style="{StaticResource MyButtonStyle}" />
         </StackPanel>
 
         <TextBlock x:Name="BananaCount" Text="0" FontSize="50" Margin="106,67,106,582" TextAlignment="Center" />
@@ -43,6 +56,12 @@
                 VerticalAlignment="Center" Background="Transparent">
             <Image Source="/Assets/banana.png" />
         </Button>
+        <TextBlock x:Name="ClickHere" Text="CLICK HERE" FontSize="50" Foreground="White" FontFamily="Century Gothic" FontWeight="Bold"
+                   TextAlignment="Center" Grid.Column="0" HorizontalAlignment="Left" Margin="10,248,0,403" Width="297" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="-25.027"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
 
     </Grid>
 </Page>

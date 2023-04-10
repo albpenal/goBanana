@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\Otros proyectos\\goBanana\\goBanana.csproj": {}
+    "C:\\Users\\sofsa\\OneDrive\\Escritorio\\Trabajos de Sofía\\Segundo de carrera\\(DSI) Desarrollo de Sistemas Interactivos\\Hitos\\Hito 5, 6 y 7\\goBanana\\goBanana.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\Otros proyectos\\goBanana\\goBanana.csproj": {
+    "C:\\Users\\sofsa\\OneDrive\\Escritorio\\Trabajos de Sofía\\Segundo de carrera\\(DSI) Desarrollo de Sistemas Interactivos\\Hitos\\Hito 5, 6 y 7\\goBanana\\goBanana.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\Otros proyectos\\goBanana\\goBanana.csproj",
+        "projectUniqueName": "C:\\Users\\sofsa\\OneDrive\\Escritorio\\Trabajos de Sofía\\Segundo de carrera\\(DSI) Desarrollo de Sistemas Interactivos\\Hitos\\Hito 5, 6 y 7\\goBanana\\goBanana.csproj",
         "projectName": "goBanana",
-        "projectPath": "D:\\GitHub\\Otros proyectos\\goBanana\\goBanana.csproj",
-        "packagesPath": "C:\\Users\\trowsky\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Otros proyectos\\goBanana\\obj\\",
+        "projectPath": "C:\\Users\\sofsa\\OneDrive\\Escritorio\\Trabajos de Sofía\\Segundo de carrera\\(DSI) Desarrollo de Sistemas Interactivos\\Hitos\\Hito 5, 6 y 7\\goBanana\\goBanana.csproj",
+        "packagesPath": "C:\\Users\\sofsa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sofsa\\OneDrive\\Escritorio\\Trabajos de Sofía\\Segundo de carrera\\(DSI) Desarrollo de Sistemas Interactivos\\Hitos\\Hito 5, 6 y 7\\goBanana\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\trowsky\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sofsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
