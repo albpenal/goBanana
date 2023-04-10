@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\GitHub\Otros proyectos\goBanana\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-04-10T11:11:45.363</Modified>
+      <Modified>2023-04-10T11:25:05.874</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\GitHub\Otros proyectos\goBanana\bin\x86\Debug\goBanana.exe">
       <PackagePath>entrypoint\goBanana.exe</PackagePath>
-      <Modified>2023-04-10T11:11:44.959</Modified>
+      <Modified>2023-04-10T11:25:05.176</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -90,15 +90,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\Otros proyectos\goBanana\bin\x86\Debug\goBanana.xr.xml">
       <PackagePath>goBanana.xr.xml</PackagePath>
-      <Modified>2023-04-10T11:11:44.899</Modified>
+      <Modified>2023-04-10T11:25:05.083</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\Otros proyectos\goBanana\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-04-10T11:11:44.902</Modified>
+      <Modified>2023-04-10T11:25:05.109</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\Otros proyectos\goBanana\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-04-10T11:11:44.902</Modified>
+      <Modified>2023-04-10T11:25:05.109</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -110,7 +110,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\Otros proyectos\goBanana\bin\x86\Debug\Core\goBanana.exe">
       <PackagePath>goBanana.exe</PackagePath>
-      <Modified>2023-04-10T11:11:45.360</Modified>
+      <Modified>2023-04-10T11:25:05.864</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
