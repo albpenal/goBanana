@@ -79,9 +79,6 @@
     <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x86\Debug\AboutUs.xbf">
-      <PackagePath>AboutUs.xbf</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>

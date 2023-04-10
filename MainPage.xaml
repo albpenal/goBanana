@@ -100,5 +100,14 @@
                 VerticalAlignment="Top" Background="AntiqueWhite" Visibility="Collapsed">
             <SymbolIcon Symbol="Back" />
         </Button>
+
+        <!--<StackPanel x:Name="aboutUs" Grid.Column ="1" HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" Height="720" Spacing="5" Visibility="Visible" Orientation="Vertical" Width="557">
+            <Button HorizontalAlignment="Left" Click="BackButton_Click">
+                <SymbolIcon Symbol="Back" />
+            </Button>
+            <WebView x:Name="aboutUs" Source="https://github.com/albpenal/goBanana" Grid.Column="1"/>
+        </StackPanel>-->
+
     </Grid>
 </Page>

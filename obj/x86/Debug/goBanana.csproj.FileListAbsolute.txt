@@ -86,8 +86,3 @@ C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\(DSI) D
 C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\(DSI) Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\(DSI) Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\(DSI) Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
-C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\(DSI) Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x86\Debug\AboutUs.xbf
-C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\(DSI) Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\obj\x86\Debug\AboutUs.g.i.cs
-C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\(DSI) Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\obj\x86\Debug\AboutUs.g.cs
-C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\(DSI) Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\obj\x86\Debug\AboutUs.xaml
-C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\(DSI) Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\obj\x86\Debug\AboutUs.xbf
