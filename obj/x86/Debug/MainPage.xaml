@@ -8,14 +8,22 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     Width="1280" Height="720">
-    
-    
-    <Grid>
 
-        <!--<Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition />
-        </Grid.RowDefinitions>-->
+    <Page.Resources>
+        <Style x:Key="MyButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FEDD5F"/>
+            <Setter Property="BorderBrush" Value="#FECD13"/>
+            <Setter Property="BorderThickness" Value="5"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Width" Value="140"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid x:ConnectionId='2' x:Name="general">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="23*" />
@@ -26,23 +34,80 @@
         <Image Source="/Assets/background.png" Stretch="Fill" Grid.ColumnSpan="3"/>
 
         <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center"
-                    VerticalAlignment="Top" Margin="0,20,0,0" Spacing="100" Height="32" Width="416">
-            <Button Content="JUEGO" />
-            <Button Content="SKINS"  />
-            <Button Content="GLOSARIO" />
+                    VerticalAlignment="Top" Margin="15,20,0,0" Spacing="35" Height="80" Width="520">
+            <Button x:ConnectionId='20' x:Name="JUEGO" Content="JUEGO" Style="{StaticResource MyButtonStyle}"                         />
+            <Button x:ConnectionId='21' x:Name="SKINS" Content="ASPECTOS"  Style="{StaticResource MyButtonStyle}"                          />
+            <Button x:ConnectionId='22' x:Name="GLOSARIO" Content="GLOSARIO" Style="{StaticResource MyButtonStyle}"                            />
         </StackPanel>
 
         <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Bottom"
-                    HorizontalAlignment="Center" Spacing="100" Margin="20" Height="32" Width="246">
-            <Button Content="OPCIONES" />
-            <Button Content="INFO"  />
+                    HorizontalAlignment="Center" Spacing="10" Margin="20" Height="72" Width="288">
+            <Button x:ConnectionId='18' x:Name="OPCIONES" Content="OPCIONES" Style="{StaticResource MyButtonStyle}"                            />
+            <Button x:ConnectionId='19' x:Name="INFO" Content="INFO" Style="{StaticResource MyButtonStyle}"                         />
         </StackPanel>
 
-        <TextBlock x:ConnectionId='1' x:Name="BananaCount" Text="0" FontSize="50" Margin="106,67,106,582" TextAlignment="Center" />
-        <Button x:ConnectionId='2'                              Height="250" Width="250" HorizontalAlignment="Center"
+        <TextBlock x:ConnectionId='3' x:Name="BananaCount" Text="0" FontSize="50" Margin="106,67,106,582" TextAlignment="Center" />
+        <Button x:ConnectionId='4'                              Height="250" Width="250" HorizontalAlignment="Center"
                 VerticalAlignment="Center" Background="Transparent">
             <Image Source="/Assets/banana.png" />
         </Button>
+
+        <TextBlock x:ConnectionId='5' x:Name="ClickHere" Text="CLICK HERE" FontSize="50" Foreground="White" FontFamily="Century Gothic" FontWeight="Bold"
+                   TextAlignment="Center" Grid.Column="0" HorizontalAlignment="Left" Margin="10,248,0,403" Width="297" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="-25.027"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
+
+        <StackPanel x:ConnectionId='6' x:Name="options" Grid.Column ="1" HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" Height="344" Spacing="20" Visibility="Collapsed">
+            <Slider x:ConnectionId='15' x:Name="Brightness" Minimum="0" Maximum="100" Value="100" 
+                    Width="400"                                        />
+            <TextBlock Text="BRILLO" HorizontalAlignment="Center" Foreground="#785619" 
+                       FontSize="40px" FontWeight="Bold" FontFamily="Century Gothic"/>
+            <Slider x:ConnectionId='16' x:Name="Music" Minimum="0" Maximum="100" Value="5" 
+                    Width="400"                                   />
+            <TextBlock Text="MÚSICA" HorizontalAlignment="Center" Foreground="#785619" 
+                       FontSize="40px" FontWeight="Bold" FontFamily="Century Gothic"/>
+            <Slider x:ConnectionId='17' x:Name="SoundEffects" Minimum="0" Maximum="100" Value="30" 
+                    Width="400"                                         />
+            <TextBlock Text="EFECTOS DE SONIDO" HorizontalAlignment="Center" Foreground="#785619" 
+                       FontSize="40px" FontWeight="Bold" FontFamily="Century Gothic"/>
+        </StackPanel>
+
+        <StackPanel x:ConnectionId='7' x:Name="info" Grid.Column ="1" HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" Height="490" Spacing="20" Visibility="Collapsed" Orientation="Vertical">
+            <TextBlock Text="IDIOMA" HorizontalAlignment="Center" Foreground="#785619" 
+                       FontSize="40px" FontWeight="Bold" FontFamily="Century Gothic"/>
+            <StackPanel HorizontalAlignment="Center" Spacing="20" Width="466">
+                <Button x:ConnectionId='11' x:Name="ENGLISH" Content="INGLÉS" Style="{StaticResource MyButtonStyle}" 
+                                                    Width="400" HorizontalAlignment="Center" Height="60"/>
+                <Button x:ConnectionId='12' x:Name="FRENCH" Content="FRANCÉS"  Style="{StaticResource MyButtonStyle}" 
+                                                   Width="400" HorizontalAlignment="Center" Height="60"/>
+                <Button x:ConnectionId='13' x:Name="SPANISH" Content="ESPAÑOL" Style="{StaticResource MyButtonStyle}" 
+                                                    Width="400" HorizontalAlignment="Center" Height="60"/>
+                <Button x:ConnectionId='14' x:Name="GERMAN" Content="ALEMÁN" Style="{StaticResource MyButtonStyle}" 
+                                                   Width="400" HorizontalAlignment="Center" Height="60"/>
+            </StackPanel>
+            <Button x:ConnectionId='10' x:Name="ABOUTUS" Content="SOBRE NOSOTROS" Style="{StaticResource MyButtonStyle}" 
+                                                    Width="500" HorizontalAlignment="Center" Height="100" FontSize="30"/>
+        </StackPanel>
+
+        
+        <WebView x:ConnectionId='8' x:Name="aboutUs" Source="https://github.com/albpenal/goBanana" Grid.Column="1" Visibility="Collapsed"/>
+        <Button x:ConnectionId='9' x:Name ="BackButton" HorizontalAlignment="Left"                          Grid.Column="1"
+                VerticalAlignment="Top" Background="AntiqueWhite" Visibility="Collapsed">
+            <SymbolIcon Symbol="Back" />
+        </Button>
+
+        <!--<StackPanel x:Name="aboutUs" Grid.Column ="1" HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" Height="720" Spacing="5" Visibility="Visible" Orientation="Vertical" Width="557">
+            <Button HorizontalAlignment="Left" Click="BackButton_Click">
+                <SymbolIcon Symbol="Back" />
+            </Button>
+            <WebView x:Name="aboutUs" Source="https://github.com/albpenal/goBanana" Grid.Column="1"/>
+        </StackPanel>-->
 
     </Grid>
 </Page>

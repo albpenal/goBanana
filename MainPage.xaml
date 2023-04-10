@@ -23,12 +23,7 @@
         </Style>
     </Page.Resources>
 
-    <Grid>
-
-        <!--<Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition />
-        </Grid.RowDefinitions>-->
+    <Grid x:Name="general">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="23*" />
@@ -40,15 +35,15 @@
 
         <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center"
                     VerticalAlignment="Top" Margin="15,20,0,0" Spacing="35" Height="80" Width="520">
-            <Button Content="JUEGO" Style="{StaticResource MyButtonStyle}"/>
-            <Button Content="SKINS"  Style="{StaticResource MyButtonStyle}"/>
-            <Button Content="GLOSARIO" Style="{StaticResource MyButtonStyle}"/>
+            <Button x:Name="JUEGO" Content="JUEGO" Style="{StaticResource MyButtonStyle}" Click="GameButton_Click"/>
+            <Button x:Name="SKINS" Content="ASPECTOS"  Style="{StaticResource MyButtonStyle}" Click="SkinsButton_Click"/>
+            <Button x:Name="GLOSARIO" Content="GLOSARIO" Style="{StaticResource MyButtonStyle}" Click="GlosaryButton_Click"/>
         </StackPanel>
 
         <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Bottom"
                     HorizontalAlignment="Center" Spacing="10" Margin="20" Height="72" Width="288">
-            <Button Content="OPCIONES" Style="{StaticResource MyButtonStyle}"/>
-            <Button Content="INFO" Style="{StaticResource MyButtonStyle}" />
+            <Button x:Name="OPCIONES" Content="OPCIONES" Style="{StaticResource MyButtonStyle}" Click="OptionsButton_Click"/>
+            <Button x:Name="INFO" Content="INFO" Style="{StaticResource MyButtonStyle}" Click="InfoButton_Click"/>
         </StackPanel>
 
         <TextBlock x:Name="BananaCount" Text="0" FontSize="50" Margin="106,67,106,582" TextAlignment="Center" />
@@ -56,6 +51,7 @@
                 VerticalAlignment="Center" Background="Transparent">
             <Image Source="/Assets/banana.png" />
         </Button>
+
         <TextBlock x:Name="ClickHere" Text="CLICK HERE" FontSize="50" Foreground="White" FontFamily="Century Gothic" FontWeight="Bold"
                    TextAlignment="Center" Grid.Column="0" HorizontalAlignment="Left" Margin="10,248,0,403" Width="297" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
             <TextBlock.RenderTransform>
@@ -63,5 +59,46 @@
             </TextBlock.RenderTransform>
         </TextBlock>
 
+
+        <StackPanel x:Name="options" Grid.Column ="1" HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" Height="344" Spacing="20" Visibility="Collapsed">
+            <Slider x:Name="Brightness" Minimum="0" Maximum="100" Value="100" 
+                    Width="400" ValueChanged="brightness_ValueChanged" />
+            <TextBlock Text="BRILLO" HorizontalAlignment="Center" Foreground="#785619" 
+                       FontSize="40px" FontWeight="Bold" FontFamily="Century Gothic"/>
+            <Slider x:Name="Music" Minimum="0" Maximum="100" Value="5" 
+                    Width="400" ValueChanged="music_ValueChanged" />
+            <TextBlock Text="MÚSICA" HorizontalAlignment="Center" Foreground="#785619" 
+                       FontSize="40px" FontWeight="Bold" FontFamily="Century Gothic"/>
+            <Slider x:Name="SoundEffects" Minimum="0" Maximum="100" Value="30" 
+                    Width="400" ValueChanged="soundEffect_ValueChanged" />
+            <TextBlock Text="EFECTOS DE SONIDO" HorizontalAlignment="Center" Foreground="#785619" 
+                       FontSize="40px" FontWeight="Bold" FontFamily="Century Gothic"/>
+        </StackPanel>
+
+        <StackPanel x:Name="info" Grid.Column ="1" HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" Height="490" Spacing="20" Visibility="Collapsed" Orientation="Vertical">
+            <TextBlock Text="IDIOMA" HorizontalAlignment="Center" Foreground="#785619" 
+                       FontSize="40px" FontWeight="Bold" FontFamily="Century Gothic"/>
+            <StackPanel HorizontalAlignment="Center" Spacing="20" Width="466">
+                <Button x:Name="ENGLISH" Content="INGLÉS" Style="{StaticResource MyButtonStyle}" 
+                        Click="EnglishButton_Click" Width="400" HorizontalAlignment="Center" Height="60"/>
+                <Button x:Name="FRENCH" Content="FRANCÉS"  Style="{StaticResource MyButtonStyle}" 
+                        Click="FrenchButton_Click" Width="400" HorizontalAlignment="Center" Height="60"/>
+                <Button x:Name="SPANISH" Content="ESPAÑOL" Style="{StaticResource MyButtonStyle}" 
+                        Click="SpanishButton_Click" Width="400" HorizontalAlignment="Center" Height="60"/>
+                <Button x:Name="GERMAN" Content="ALEMÁN" Style="{StaticResource MyButtonStyle}" 
+                        Click="GermanButton_Click" Width="400" HorizontalAlignment="Center" Height="60"/>
+            </StackPanel>
+            <Button x:Name="ABOUTUS" Content="SOBRE NOSOTROS" Style="{StaticResource MyButtonStyle}" 
+                        Click="AboutUsButton_Click" Width="500" HorizontalAlignment="Center" Height="100" FontSize="30"/>
+        </StackPanel>
+
+        
+        <WebView x:Name="aboutUs" Source="https://github.com/albpenal/goBanana" Grid.Column="1" Visibility="Collapsed"/>
+        <Button x:Name ="BackButton" HorizontalAlignment="Left" Click="BackButton_Click" Grid.Column="1"
+                VerticalAlignment="Top" Background="AntiqueWhite" Visibility="Collapsed">
+            <SymbolIcon Symbol="Back" />
+        </Button>
     </Grid>
 </Page>
