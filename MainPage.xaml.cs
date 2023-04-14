@@ -166,6 +166,8 @@ namespace goBanana
             JUEGO.Visibility = Visibility.Collapsed;
             SKINS.Visibility = Visibility.Collapsed;
             GLOSARIO.Visibility = Visibility.Collapsed;
+            INFO.Visibility = Visibility.Collapsed;
+            OPCIONES.Visibility = Visibility.Collapsed;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
