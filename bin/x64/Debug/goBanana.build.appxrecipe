@@ -40,6 +40,33 @@
     <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\banana.png">
       <PackagePath>Assets\banana.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\botonestienda.png">
+      <PackagePath>Assets\botonestienda.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\canvasMonos.png">
+      <PackagePath>Assets\canvasMonos.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\cursor.png">
+      <PackagePath>Assets\cursor.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\flecha.png">
+      <PackagePath>Assets\flecha.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\monete.png">
+      <PackagePath>Assets\monete.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\monkey.png">
+      <PackagePath>Assets\monkey.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\noflecha.png">
+      <PackagePath>Assets\noflecha.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\orangutan.png">
+      <PackagePath>Assets\orangutan.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\tractor.png">
+      <PackagePath>Assets\tractor.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
@@ -66,6 +93,9 @@
     <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\music.mp3">
+      <PackagePath>Assets\music.mp3</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>

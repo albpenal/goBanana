@@ -26,9 +26,6 @@
     </Page.Resources>
 
     <Grid x:Name="general">
-
-
-
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="23*" />
             <ColumnDefinition Width="36*" />
@@ -75,12 +72,6 @@
             <Button x:Name="GLOSARIO" Content="GLOSARIO" Style="{StaticResource MyButtonStyle}" Click="GlosaryButton_Click"/>
         </StackPanel>
 
-        <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Bottom"
-                    HorizontalAlignment="Center" Spacing="10" Margin="20" Height="72" Width="288">
-            <Button x:Name="OPCIONES" Content="OPCIONES" Style="{StaticResource MyButtonStyle}" Click="OptionsButton_Click"/>
-            <Button x:Name="INFO" Content="INFO" Style="{StaticResource MyButtonStyle}" Click="InfoButton_Click"/>
-        </StackPanel>
-
         <Grid Grid.Column="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="48*"/>
@@ -103,7 +94,7 @@
 
             <!--Tienda derecha-->
             <StackPanel Orientation="Vertical" Grid.Row="1" Margin="0,10,0,0" Spacing="23">
-                
+
                 <!--Tienda derecha cursores-->
                 <StackPanel Orientation="Vertical" Spacing="15">
                     <StackPanel Orientation="Horizontal" Spacing="5" HorizontalAlignment="Center" Height="18">
@@ -140,7 +131,7 @@
                 <StackPanel Orientation="Vertical" Spacing="15">
                     <StackPanel Orientation="Horizontal" Spacing="5" HorizontalAlignment="Center" Height="18">
                         <TextBlock Text="Precio:" FontFamily="Century Gothic" FontSize="15" Foreground="Black"/>
-                        <TextBlock x:Name="TractorPrice" Text="1" FontFamily="Century Gothic" FontSize="15" Foreground="Black"/>
+                        <TextBlock x:Name="TractorPrice" Text="2000" FontFamily="Century Gothic" FontSize="15" Foreground="Black"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center" Height="84" Width="269">
@@ -155,7 +146,94 @@
             </StackPanel>
         </Grid>
 
+        <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Bottom"
+                    HorizontalAlignment="Center" Spacing="10" Margin="20" Height="72" Width="288">
+            <Button x:Name="OPCIONES" Content="OPCIONES" Style="{StaticResource MyButtonStyle}" Click="OptionsButton_Click"/>
+            <Button x:Name="INFO" Content="INFO" Style="{StaticResource MyButtonStyle}" Click="InfoButton_Click"/>
+        </StackPanel>
 
+        <!--Juego-->
+        <Image Visibility="Collapsed" x:Name="game" Source="/Assets/canvasMonos.png" Grid.Column="1" MaxWidth="500" 
+               HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,145,0,0"/>
+
+        <!--Menu de skins-->
+        <StackPanel x:Name="skinsButtons" Grid.Column="1" HorizontalAlignment="Center" 
+                    Orientation="Vertical" VerticalAlignment="Center" Spacing="20" Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" 
+                    Spacing="10">
+                <TextBlock Text="Aspecto Actual:" FontFamily="Century Gothic" 
+                           FontSize="35" Foreground="Black" FontWeight="Bold"/>
+                <TextBlock x:Name="CurrentSkin" Text="NINGUNO" FontFamily="Century Gothic" 
+                           FontSize="35" Foreground="Black" FontWeight="Bold"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" >
+                <Button Click="Clown_Click" MaxHeight="140"  HorizontalAlignment="Center" Background="Transparent" VerticalAlignment="Top">
+                    <Image Source="/Assets/botonestienda.png" />
+                </Button>
+                <Button Click="Viking_Click" MaxHeight="140"  HorizontalAlignment="Center" Background="Transparent" VerticalAlignment="Top">
+                    <Image Source="/Assets/botonestienda.png" />
+                </Button>
+                <Button x:Name="Desequipar" Content="DESEQUIPAR" HorizontalAlignment="Center"
+                        Style="{StaticResource MyButtonStyle}" Click="Desequipar_Click" Width="150"
+                        Background="#FECD13"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel  x:Name="skinsText" Grid.Column="1" VerticalAlignment="Center" Orientation="Vertical" 
+                     Spacing="25" HorizontalAlignment="Center" Visibility="Collapsed">
+            <StackPanel Orientation="Vertical" Spacing="15">
+                <TextBlock x:Name="ClownPrice"  Text="Precio: 10" FontFamily="Century Gothic" 
+                           FontSize="15" Foreground="Black" HorizontalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Vertical" Spacing="5">
+                        <TextBlock VerticalAlignment="Center" Text="Clown" HorizontalAlignment="Center"
+                                   FontFamily="Century Gothic" FontSize="30" Foreground="Black" FontWeight="Bold"/>
+                        <TextBlock VerticalAlignment="Center" x:Name="Clowns" 
+                                   Text="COMPRAR" FontFamily="Century Gothic" FontSize="30" Foreground="Black" FontWeight="Bold"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Spacing="15">
+                <TextBlock x:Name="VikingPrice" Text="Precio: 20" FontFamily="Century Gothic" 
+                           FontSize="15" Foreground="Black" HorizontalAlignment="Center"/>
+
+                <StackPanel Orientation="Vertical" Spacing="5">
+                    <TextBlock VerticalAlignment="Center" Text="Viking" HorizontalAlignment="Center"
+                                   FontFamily="Century Gothic" FontSize="30" 
+                               Foreground="Black" FontWeight="Bold"/>
+                    <TextBlock VerticalAlignment="Center" x:Name="Vikings" 
+                                   Text="COMPRAR" FontFamily="Century Gothic" FontSize="30" 
+                               Foreground="Black" FontWeight="Bold"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+        <!--Simiopedia-->
+        <Grid x:Name="simiopedia" Grid.Column="1">
+            <Image x:Name="monete" Source="/Assets/Monete.png" MaxWidth="500" 
+               HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,173,0,0"/>
+            
+            <Image x:Name="orangutan" Source="/Assets/Orangutan.png" MaxWidth="500" 
+               HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,173,0,0" Visibility="Collapsed"/>
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                        Spacing="230" Margin="110,360,0,0">
+                <Button x:Name="back" Background="Transparent" 
+            MaxHeight="65" RenderTransformOrigin="0.5,0.5" Click="back_Click">
+                    <Button.RenderTransform>
+                        <CompositeTransform Rotation="-179.963"/>
+                    </Button.RenderTransform>
+                    <Image x:Name="backBImage" Source="/Assets/noflecha.png" />
+                </Button>
+                <Button x:Name="next" Background="Transparent" MaxHeight="65" Click="next_Click">
+                    <Image x:Name="nextBImage" Source="/Assets/flecha.png" />
+                </Button>
+
+            </StackPanel>
+
+        </Grid>
 
         <!--Menu de opciones-->
         <StackPanel x:Name="options" Grid.Column ="1" HorizontalAlignment="Center" 
@@ -164,7 +242,7 @@
                        FontSize="40px" FontWeight="Bold" FontFamily="Century Gothic"/>
             <Slider x:Name="Brightness" Minimum="0" Maximum="100" Value="100" 
                     Width="400" ValueChanged="brightness_ValueChanged" />
-            
+
             <TextBlock Text="MÚSICA" HorizontalAlignment="Center" Foreground="#785619" 
                        FontSize="40px" FontWeight="Bold" FontFamily="Century Gothic"/>
             <Slider x:Name="Music" Minimum="0" Maximum="100" Value="0" 
@@ -174,9 +252,10 @@
                        FontSize="40px" FontWeight="Bold" FontFamily="Century Gothic"/>
             <Slider x:Name="SoundEffects" Minimum="0" Maximum="100" Value="30" 
                     Width="400" ValueChanged="soundEffect_ValueChanged" />
-            
+
         </StackPanel>
 
+        <!--Menu de información-->
         <StackPanel x:Name="info" Grid.Column ="1" HorizontalAlignment="Center" 
                     VerticalAlignment="Center" Height="490" Spacing="20" Visibility="Collapsed" Orientation="Vertical">
             <TextBlock Text="IDIOMA" HorizontalAlignment="Center" Foreground="#785619" 
