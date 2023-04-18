@@ -35,7 +35,7 @@ namespace goBanana
             music.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/music.mp3"));
             music.Play();
             music.IsLoopingEnabled = true;
-            music.Volume = 5.0;
+            music.Volume = 0.0;
 
             effect.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/music.mp3"));
             effect.Volume = 30.0;
@@ -54,6 +54,7 @@ namespace goBanana
         {
             music.Volume = e.NewValue / 100.0;
         }
+
         private void brightness_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
         {
             general.Opacity = e.NewValue / 100.0 + 0.1;
@@ -131,7 +132,6 @@ namespace goBanana
             GERMAN.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xDD, 0x5F));
         }
 
-
         private void FrenchButton_Click(object sender, RoutedEventArgs e)
         {
             FRENCH.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xCD, 0x13));
@@ -179,6 +179,43 @@ namespace goBanana
             JUEGO.Visibility = Visibility.Visible;
             SKINS.Visibility = Visibility.Visible;
             GLOSARIO.Visibility = Visibility.Visible;
+        }
+
+        private void BuyCursor_Click(object sender, RoutedEventArgs e)
+        {
+            if(int.Parse(CursorPrice.Text) <= int.Parse(BananaCount.Text))
+            {
+                NumberOfCursors.Text = (int.Parse(NumberOfCursors.Text) + 1).ToString();
+                BananaCount.Text = (int.Parse(BananaCount.Text) - int.Parse(CursorPrice.Text)).ToString();
+                CursorPrice.Text = (int.Parse(CursorPrice.Text) + 10).ToString();
+                BananasPerSec.Text = (int.Parse(BananasPerSec.Text) + 1).ToString();
+            }
+        }
+
+        private void BuyMonkey_Click(object sender, RoutedEventArgs e)
+        {
+            if (int.Parse(MonkeyPrice.Text) <= int.Parse(BananaCount.Text))
+            {
+                NumberOfMonkeys.Text = (int.Parse(NumberOfMonkeys.Text) + 1).ToString();
+                BananaCount.Text = (int.Parse(BananaCount.Text) - int.Parse(MonkeyPrice.Text)).ToString();
+                MonkeyPrice.Text = (int.Parse(MonkeyPrice.Text) + 50).ToString();
+                BananasPerSec.Text = (int.Parse(BananasPerSec.Text) + 10).ToString();
+            }
+        }
+
+        private void BuyTractor_Click(object sender, RoutedEventArgs e)
+        {
+            if (int.Parse(TractorPrice.Text) <= int.Parse(BananaCount.Text))
+            {
+                NumberOfTractors.Text = (int.Parse(NumberOfTractors.Text) + 1).ToString();
+                BananaCount.Text = (int.Parse(BananaCount.Text) - int.Parse(TractorPrice.Text)).ToString();
+                TractorPrice.Text = (int.Parse(TractorPrice.Text) + 1).ToString();
+            }
+        }
+        private async void GoGithub_Click(object sender, RoutedEventArgs e)
+        {
+            Uri uri = new Uri("https://github.com/albpenal/goBanana");
+            var success = await Windows.System.Launcher.LaunchUriAsync(uri);
         }
     }
 }

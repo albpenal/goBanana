@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-R08OFDJ</Machine>
-    <WindowsUser>sofsa</WindowsUser>
+    <Machine>DESKTOP-A2DQHK0</Machine>
+    <WindowsUser>trowsky</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>f2ef3b15-eabd-4dd6-8782-c2a083578a0b</PackageIdentityName>
     <PackageIdentityPublisher>CN=trowsky</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>D:\GitHub\Otros proyectos\DSI\goBanana\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>19A00C7A8457160205823D555ACC022FF96EED62B15EB61753CB0A914BA479C0</RegisteredManifestChecksum>
+    <LayoutDir>D:\GitHub\Otros proyectos\DSI\goBanana\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>A8596CB991D5639B5DF1D75A1EAD39AA00E1369A2476C6020C358840ECD30D0F</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>f2ef3b15-eabd-4dd6-8782-c2a083578a0b_1.0.0.0_x86__jqh097k3tw64y</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>f2ef3b15-eabd-4dd6-8782-c2a083578a0b_jqh097k3tw64y!App</RegisteredUserModeAppID>
     <RegisteredPackageID>f2ef3b15-eabd-4dd6-8782-c2a083578a0b</RegisteredPackageID>
@@ -27,98 +27,114 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="D:\GitHub\Otros proyectos\DSI\goBanana\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-04-14T13:44:03.191</Modified>
+      <Modified>2023-04-18T12:02:47.124</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x86\Debug\goBanana.exe">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\bin\x86\Debug\goBanana.exe">
       <PackagePath>entrypoint\goBanana.exe</PackagePath>
-      <Modified>2023-04-14T13:44:02.765</Modified>
+      <Modified>2023-04-18T12:02:46.656</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
-      <Modified>2022-06-10T21:24:12.000</Modified>
+      <Modified>2022-06-10T20:24:12.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T02:52:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\background.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\background.png">
       <PackagePath>Assets\background.png</PackagePath>
-      <Modified>2023-04-10T11:35:01.154</Modified>
+      <Modified>2023-04-18T08:50:26.714</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\banana.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\banana.png">
       <PackagePath>Assets\banana.png</PackagePath>
-      <Modified>2023-04-10T11:35:01.154</Modified>
+      <Modified>2023-04-18T08:50:26.714</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\botonestienda.png">
+      <PackagePath>Assets\botonestienda.png</PackagePath>
+      <Modified>2023-04-18T10:46:19.002</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\cursor.png">
+      <PackagePath>Assets\cursor.png</PackagePath>
+      <Modified>2023-04-18T11:03:13.879</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\monkey.png">
+      <PackagePath>Assets\monkey.png</PackagePath>
+      <Modified>2023-04-18T11:23:22.492</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\tractor.png">
+      <PackagePath>Assets\tractor.png</PackagePath>
+      <Modified>2023-04-18T11:24:55.361</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2023-04-10T11:35:01.151</Modified>
+      <Modified>2023-04-18T08:50:26.691</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-04-10T11:35:01.151</Modified>
+      <Modified>2023-04-18T08:50:26.692</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-04-10T11:35:01.151</Modified>
+      <Modified>2023-04-18T08:50:26.692</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-04-10T11:35:01.152</Modified>
+      <Modified>2023-04-18T08:50:26.692</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-04-10T11:35:01.152</Modified>
+      <Modified>2023-04-18T08:50:26.712</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-04-10T11:35:01.152</Modified>
+      <Modified>2023-04-18T08:50:26.712</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-04-10T11:35:01.152</Modified>
+      <Modified>2023-04-18T08:50:26.712</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\music.mp3">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\music.mp3">
       <PackagePath>Assets\music.mp3</PackagePath>
-      <Modified>2023-04-10T16:00:42.740</Modified>
+      <Modified>2023-04-18T08:50:26.722</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2023-04-10T11:35:01.155</Modified>
+      <Modified>2023-04-18T08:50:26.738</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x86\Debug\goBanana.xr.xml">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\bin\x86\Debug\goBanana.xr.xml">
       <PackagePath>goBanana.xr.xml</PackagePath>
-      <Modified>2023-04-14T13:34:50.925</Modified>
+      <Modified>2023-04-18T11:54:59.277</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-04-14T13:44:02.717</Modified>
+      <Modified>2023-04-18T12:02:46.587</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-04-14T13:44:02.717</Modified>
+      <Modified>2023-04-18T12:02:46.587</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2020-12-02T00:52:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-04-10T18:20:17.267</Modified>
+      <Modified>2023-04-18T11:34:28.885</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x86\Debug\Core\goBanana.exe">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\bin\x86\Debug\Core\goBanana.exe">
       <PackagePath>goBanana.exe</PackagePath>
-      <Modified>2023-04-14T13:44:03.188</Modified>
+      <Modified>2023-04-18T12:02:47.122</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

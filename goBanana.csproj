@@ -132,7 +132,11 @@
   <ItemGroup>
     <Content Include="Assets\background.png" />
     <Content Include="Assets\banana.png" />
+    <Content Include="Assets\botonestienda.png" />
+    <Content Include="Assets\cursor.png" />
+    <Content Include="Assets\monkey.png" />
     <Content Include="Assets\music.mp3" />
+    <Content Include="Assets\tractor.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
