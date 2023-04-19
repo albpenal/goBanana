@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-04-18T18:31:57.516</Modified>
+      <Modified>2023-04-19T15:26:03.693</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x64\Debug\goBanana.exe">
       <PackagePath>entrypoint\goBanana.exe</PackagePath>
-      <Modified>2023-04-18T18:31:57.209</Modified>
+      <Modified>2023-04-19T15:26:03.372</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -134,15 +134,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x64\Debug\goBanana.xr.xml">
       <PackagePath>goBanana.xr.xml</PackagePath>
-      <Modified>2023-04-18T18:02:31.347</Modified>
+      <Modified>2023-04-19T15:20:18.928</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-04-18T18:31:57.151</Modified>
+      <Modified>2023-04-19T15:26:03.311</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x64\Debug\IntialPage.xbf">
+      <PackagePath>IntialPage.xbf</PackagePath>
+      <Modified>2023-04-19T15:26:03.311</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-04-18T18:31:57.151</Modified>
+      <Modified>2023-04-19T15:26:03.311</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -150,11 +154,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-04-18T18:14:17.994</Modified>
+      <Modified>2023-04-19T14:40:37.712</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x64\Debug\Core\goBanana.exe">
       <PackagePath>goBanana.exe</PackagePath>
-      <Modified>2023-04-18T18:31:57.514</Modified>
+      <Modified>2023-04-19T15:26:03.690</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

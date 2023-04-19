@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="goBanana.IntialPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:goBanana"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Button x:ConnectionId='2'                     Content="PRESIONA PARA VOLVER AL JUEGO DESDE LA PÁGINA DE MEJORA"
+                HorizontalAlignment="Center" Height="3500" Width="3500" FontSize="40"/>
+    </Grid>
+</Page>
+

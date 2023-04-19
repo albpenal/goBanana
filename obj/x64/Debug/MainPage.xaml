@@ -48,7 +48,9 @@
                 </TextBlock.RenderTransform>
             </TextBlock>
 
-            <Button x:ConnectionId='48' Grid.Row="2"                              MaxHeight="250" MaxWidth="250" HorizontalAlignment="Center" Background="Transparent" Margin="0,65,0,0" VerticalAlignment="Top">
+            <Button x:ConnectionId='48' Grid.Row="2"                              MaxHeight="250" MaxWidth="250" 
+                    HorizontalAlignment="Center" Background="Transparent" Margin="0,65,0,0" 
+                    VerticalAlignment="Top" TabIndex="0">
                 <Image Source="/Assets/banana.png" />
             </Button>
 
@@ -67,11 +69,108 @@
 
         <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center"
                     VerticalAlignment="Top" Margin="15,20,0,0" Spacing="35" Height="80" Width="520">
-            <Button x:ConnectionId='44' x:Name="JUEGO" Content="JUEGO" Style="{StaticResource MyButtonStyle}"                         />
-            <Button x:ConnectionId='45' x:Name="SKINS" Content="ASPECTOS"  Style="{StaticResource MyButtonStyle}"                          />
-            <Button x:ConnectionId='46' x:Name="GLOSARIO" Content="GLOSARIO" Style="{StaticResource MyButtonStyle}"                            />
+            <Button x:ConnectionId='44' x:Name="JUEGO" Content="JUEGO" Style="{StaticResource MyButtonStyle}" 
+                                             TabIndex="1"/>
+            <Button x:ConnectionId='45' x:Name="SKINS" Content="ASPECTOS"  Style="{StaticResource MyButtonStyle}" 
+                                              TabIndex="11"/>
+            <Button x:ConnectionId='46' x:Name="GLOSARIO" Content="GLOSARIO" Style="{StaticResource MyButtonStyle}" 
+                                                TabIndex="15"/>
         </StackPanel>
 
+        <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Bottom"
+                    HorizontalAlignment="Center" Spacing="10" Margin="20" Height="72" Width="288">
+            <Button x:ConnectionId='42' x:Name="OPCIONES" Content="OPCIONES" Style="{StaticResource MyButtonStyle}" 
+                                                TabIndex="21"/>
+            <Button x:ConnectionId='43' x:Name="INFO" Content="INFO" Style="{StaticResource MyButtonStyle}" 
+                                             TabIndex="25"/>
+        </StackPanel>
+
+        <!--Juego-->
+        <Image x:ConnectionId='3' x:Name="game" Source="/Assets/canvasMonos.png" Grid.Column="1" MaxWidth="500" 
+               HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,145,0,0"/>
+
+        <!--Menu de skins-->
+        <StackPanel x:ConnectionId='4' x:Name="skinsButtons" Grid.Column="1" HorizontalAlignment="Center" 
+                    Orientation="Vertical" VerticalAlignment="Center" Spacing="20" Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" 
+                    Spacing="10">
+                <TextBlock Text="Aspecto Actual:" FontFamily="Century Gothic" 
+                           FontSize="35" Foreground="Black" FontWeight="Bold"/>
+                <TextBlock x:ConnectionId='41' x:Name="CurrentSkin" Text="NINGUNO" FontFamily="Century Gothic" 
+                           FontSize="35" Foreground="Black" FontWeight="Bold"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" >
+                <Button x:ConnectionId='38'                     MaxHeight="140"  HorizontalAlignment="Center" 
+                        Background="Transparent" VerticalAlignment="Top" TabIndex="12">
+                    <Image Source="/Assets/botonestienda.png" />
+                </Button>
+                <Button x:ConnectionId='39'                      MaxHeight="140"  HorizontalAlignment="Center" 
+                        Background="Transparent" VerticalAlignment="Top" TabIndex="13">
+                    <Image Source="/Assets/botonestienda.png" />
+                </Button>
+                <Button x:ConnectionId='40' x:Name="Desequipar" Content="DESEQUIPAR" HorizontalAlignment="Center"
+                        Style="{StaticResource MyButtonStyle}"                          Width="150"
+                        Background="#FECD13" TabIndex="14"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel x:ConnectionId='5'  x:Name="skinsText" Grid.Column="1" VerticalAlignment="Center" Orientation="Vertical" 
+                     Spacing="25" HorizontalAlignment="Center" Visibility="Collapsed">
+            <StackPanel Orientation="Vertical" Spacing="15">
+                <TextBlock x:ConnectionId='36' x:Name="ClownPrice"  Text="Precio: 10" FontFamily="Century Gothic" 
+                           FontSize="15" Foreground="Black" HorizontalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Vertical" Spacing="5">
+                        <TextBlock VerticalAlignment="Center" Text="Clown" HorizontalAlignment="Center"
+                                   FontFamily="Century Gothic" FontSize="30" Foreground="Black" FontWeight="Bold"/>
+                        <TextBlock x:ConnectionId='37' VerticalAlignment="Center" x:Name="Clowns" 
+                                   Text="COMPRAR" FontFamily="Century Gothic" FontSize="30" Foreground="Black" FontWeight="Bold"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Spacing="15">
+                <TextBlock x:ConnectionId='34' x:Name="VikingPrice" Text="Precio: 20" FontFamily="Century Gothic" 
+                           FontSize="15" Foreground="Black" HorizontalAlignment="Center"/>
+
+                <StackPanel Orientation="Vertical" Spacing="5">
+                    <TextBlock VerticalAlignment="Center" Text="Viking" HorizontalAlignment="Center"
+                                   FontFamily="Century Gothic" FontSize="30" 
+                               Foreground="Black" FontWeight="Bold"/>
+                    <TextBlock x:ConnectionId='35' VerticalAlignment="Center" x:Name="Vikings" 
+                                   Text="COMPRAR" FontFamily="Century Gothic" FontSize="30" 
+                               Foreground="Black" FontWeight="Bold"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+        <!--Simiopedia-->
+        <Grid x:ConnectionId='6' x:Name="simiopedia" Grid.Column="1" Visibility="Collapsed">
+            <Image x:ConnectionId='28' x:Name="monete" Source="/Assets/Monete.png" MaxWidth="500" 
+               HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,173,0,0"/>
+
+            <Image x:ConnectionId='29' x:Name="orangutan" Source="/Assets/Orangutan.png" MaxWidth="500" 
+               HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,173,0,0" Visibility="Collapsed"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                        Spacing="230" Margin="110,360,0,0">
+                <Button x:ConnectionId='30' x:Name="back" Background="Transparent" 
+            MaxHeight="65" RenderTransformOrigin="0.5,0.5"                    TabIndex="16">
+                    <Button.RenderTransform>
+                        <CompositeTransform Rotation="-179.963"/>
+                    </Button.RenderTransform>
+                    <Image x:ConnectionId='33' x:Name="backBImage" Source="/Assets/noflecha.png" />
+                </Button>
+                <Button x:ConnectionId='31' x:Name="next" Background="Transparent" MaxHeight="65"                    TabIndex="17">
+                    <Image x:ConnectionId='32' x:Name="nextBImage" Source="/Assets/flecha.png" />
+                </Button>
+
+            </StackPanel>
+
+        </Grid>
+
+        <!--Tienda-->
         <Grid Grid.Column="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="48*"/>
@@ -81,13 +180,16 @@
 
             <!--Botones tienda derecha-->
             <StackPanel Orientation="Vertical" Grid.Row="1">
-                <Button x:ConnectionId='41'                         MaxHeight="140"  HorizontalAlignment="Center" Background="Transparent" VerticalAlignment="Top">
+                <Button x:ConnectionId='25'                         MaxHeight="140"  HorizontalAlignment="Center" 
+                        Background="Transparent" VerticalAlignment="Top" TabIndex="18">
                     <Image Source="/Assets/botonestienda.png" />
                 </Button>
-                <Button x:ConnectionId='42'                         MaxHeight="140"  HorizontalAlignment="Center" Background="Transparent" VerticalAlignment="Top">
+                <Button x:ConnectionId='26'                         MaxHeight="140"  HorizontalAlignment="Center" 
+                        Background="Transparent" VerticalAlignment="Top" TabIndex="19">
                     <Image Source="/Assets/botonestienda.png" />
                 </Button>
-                <Button x:ConnectionId='43'                          MaxHeight="140"  HorizontalAlignment="Center" Background="Transparent" VerticalAlignment="Top">
+                <Button x:ConnectionId='27'                          MaxHeight="140"  HorizontalAlignment="Center" 
+                        Background="Transparent" VerticalAlignment="Top" TabIndex="20">
                     <Image Source="/Assets/botonestienda.png" />
                 </Button>
             </StackPanel>
@@ -99,14 +201,14 @@
                 <StackPanel Orientation="Vertical" Spacing="15">
                     <StackPanel Orientation="Horizontal" Spacing="5" HorizontalAlignment="Center" Height="18">
                         <TextBlock Text="Precio:" FontFamily="Century Gothic" FontSize="15" Foreground="Black"/>
-                        <TextBlock x:ConnectionId='40' x:Name="CursorPrice" Text="10" FontFamily="Century Gothic" FontSize="15" Foreground="Black"/>
+                        <TextBlock x:ConnectionId='24' x:Name="CursorPrice" Text="10" FontFamily="Century Gothic" FontSize="15" Foreground="Black"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center" Height="84" Width="269">
                         <Image Source="/Assets/cursor.png" MaxWidth="68"/>
                         <StackPanel Orientation="Horizontal" Spacing="10">
                             <TextBlock VerticalAlignment="Center" Text="Cursores:" FontFamily="Century Gothic" FontSize="30" Foreground="Black" FontWeight="Bold"/>
-                            <TextBlock x:ConnectionId='39' VerticalAlignment="Center" x:Name="NumberOfCursors" Text="0" FontFamily="Century Gothic" FontSize="30" Foreground="Black" FontWeight="Bold"/>
+                            <TextBlock x:ConnectionId='23' VerticalAlignment="Center" x:Name="NumberOfCursors" Text="0" FontFamily="Century Gothic" FontSize="30" Foreground="Black" FontWeight="Bold"/>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
@@ -115,14 +217,14 @@
                 <StackPanel Orientation="Vertical" Spacing="15">
                     <StackPanel Orientation="Horizontal" Spacing="5" HorizontalAlignment="Center" Height="18">
                         <TextBlock Text="Precio:" FontFamily="Century Gothic" FontSize="15" Foreground="Black"/>
-                        <TextBlock x:ConnectionId='38' x:Name="MonkeyPrice" Text="50" FontFamily="Century Gothic" FontSize="15" Foreground="Black"/>
+                        <TextBlock x:ConnectionId='22' x:Name="MonkeyPrice" Text="50" FontFamily="Century Gothic" FontSize="15" Foreground="Black"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center" Height="84" Width="269">
                         <Image Source="/Assets/monkey.png" MaxWidth="68"/>
                         <StackPanel Orientation="Horizontal" Spacing="10">
                             <TextBlock VerticalAlignment="Center" Text="Monos:" FontFamily="Century Gothic" FontSize="30" Foreground="Black" FontWeight="Bold" />
-                            <TextBlock x:ConnectionId='37' VerticalAlignment="Center" x:Name="NumberOfMonkeys" Text="0" FontFamily="Century Gothic" FontSize="30" Foreground="Black" FontWeight="Bold"/>
+                            <TextBlock x:ConnectionId='21' VerticalAlignment="Center" x:Name="NumberOfMonkeys" Text="0" FontFamily="Century Gothic" FontSize="30" Foreground="Black" FontWeight="Bold"/>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
@@ -131,108 +233,19 @@
                 <StackPanel Orientation="Vertical" Spacing="15">
                     <StackPanel Orientation="Horizontal" Spacing="5" HorizontalAlignment="Center" Height="18">
                         <TextBlock Text="Precio:" FontFamily="Century Gothic" FontSize="15" Foreground="Black"/>
-                        <TextBlock x:ConnectionId='36' x:Name="TractorPrice" Text="2000" FontFamily="Century Gothic" FontSize="15" Foreground="Black"/>
+                        <TextBlock x:ConnectionId='20' x:Name="TractorPrice" Text="2000" FontFamily="Century Gothic" FontSize="15" Foreground="Black"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center" Height="84" Width="269">
                         <Image Source="/Assets/tractor.png" MaxWidth="68"/>
                         <StackPanel Orientation="Horizontal" Spacing="10">
                             <TextBlock VerticalAlignment="Center" Text="Tractores:" FontFamily="Century Gothic" FontSize="30" Foreground="Black" FontWeight="Bold" />
-                            <TextBlock x:ConnectionId='35' VerticalAlignment="Center" x:Name="NumberOfTractors" Text="0" FontFamily="Century Gothic" FontSize="30" Foreground="Black" FontWeight="Bold"/>
+                            <TextBlock x:ConnectionId='19' VerticalAlignment="Center" x:Name="NumberOfTractors" Text="0" FontFamily="Century Gothic" FontSize="30" Foreground="Black" FontWeight="Bold"/>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
 
             </StackPanel>
-        </Grid>
-
-        <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Bottom"
-                    HorizontalAlignment="Center" Spacing="10" Margin="20" Height="72" Width="288">
-            <Button x:ConnectionId='33' x:Name="OPCIONES" Content="OPCIONES" Style="{StaticResource MyButtonStyle}"                            />
-            <Button x:ConnectionId='34' x:Name="INFO" Content="INFO" Style="{StaticResource MyButtonStyle}"                         />
-        </StackPanel>
-
-        <!--Juego-->
-        <Image x:ConnectionId='3' Visibility="Collapsed" x:Name="game" Source="/Assets/canvasMonos.png" Grid.Column="1" MaxWidth="500" 
-               HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,145,0,0"/>
-
-        <!--Menu de skins-->
-        <StackPanel x:ConnectionId='4' x:Name="skinsButtons" Grid.Column="1" HorizontalAlignment="Center" 
-                    Orientation="Vertical" VerticalAlignment="Center" Spacing="20" Visibility="Collapsed">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" 
-                    Spacing="10">
-                <TextBlock Text="Aspecto Actual:" FontFamily="Century Gothic" 
-                           FontSize="35" Foreground="Black" FontWeight="Bold"/>
-                <TextBlock x:ConnectionId='32' x:Name="CurrentSkin" Text="NINGUNO" FontFamily="Century Gothic" 
-                           FontSize="35" Foreground="Black" FontWeight="Bold"/>
-            </StackPanel>
-
-            <StackPanel Orientation="Vertical" >
-                <Button x:ConnectionId='29'                     MaxHeight="140"  HorizontalAlignment="Center" Background="Transparent" VerticalAlignment="Top">
-                    <Image Source="/Assets/botonestienda.png" />
-                </Button>
-                <Button x:ConnectionId='30'                      MaxHeight="140"  HorizontalAlignment="Center" Background="Transparent" VerticalAlignment="Top">
-                    <Image Source="/Assets/botonestienda.png" />
-                </Button>
-                <Button x:ConnectionId='31' x:Name="Desequipar" Content="DESEQUIPAR" HorizontalAlignment="Center"
-                        Style="{StaticResource MyButtonStyle}"                          Width="150"
-                        Background="#FECD13"/>
-            </StackPanel>
-        </StackPanel>
-
-        <StackPanel x:ConnectionId='5'  x:Name="skinsText" Grid.Column="1" VerticalAlignment="Center" Orientation="Vertical" 
-                     Spacing="25" HorizontalAlignment="Center" Visibility="Collapsed">
-            <StackPanel Orientation="Vertical" Spacing="15">
-                <TextBlock x:ConnectionId='27' x:Name="ClownPrice"  Text="Precio: 10" FontFamily="Century Gothic" 
-                           FontSize="15" Foreground="Black" HorizontalAlignment="Center"/>
-                <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
-                    <StackPanel Orientation="Vertical" Spacing="5">
-                        <TextBlock VerticalAlignment="Center" Text="Clown" HorizontalAlignment="Center"
-                                   FontFamily="Century Gothic" FontSize="30" Foreground="Black" FontWeight="Bold"/>
-                        <TextBlock x:ConnectionId='28' VerticalAlignment="Center" x:Name="Clowns" 
-                                   Text="COMPRAR" FontFamily="Century Gothic" FontSize="30" Foreground="Black" FontWeight="Bold"/>
-                    </StackPanel>
-                </StackPanel>
-            </StackPanel>
-
-            <StackPanel Orientation="Vertical" Spacing="15">
-                <TextBlock x:ConnectionId='25' x:Name="VikingPrice" Text="Precio: 20" FontFamily="Century Gothic" 
-                           FontSize="15" Foreground="Black" HorizontalAlignment="Center"/>
-
-                <StackPanel Orientation="Vertical" Spacing="5">
-                    <TextBlock VerticalAlignment="Center" Text="Viking" HorizontalAlignment="Center"
-                                   FontFamily="Century Gothic" FontSize="30" 
-                               Foreground="Black" FontWeight="Bold"/>
-                    <TextBlock x:ConnectionId='26' VerticalAlignment="Center" x:Name="Vikings" 
-                                   Text="COMPRAR" FontFamily="Century Gothic" FontSize="30" 
-                               Foreground="Black" FontWeight="Bold"/>
-                </StackPanel>
-            </StackPanel>
-        </StackPanel>
-
-        <!--Simiopedia-->
-        <Grid x:ConnectionId='6' x:Name="simiopedia" Grid.Column="1">
-            <Image x:ConnectionId='19' x:Name="monete" Source="/Assets/Monete.png" MaxWidth="500" 
-               HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,173,0,0"/>
-            
-            <Image x:ConnectionId='20' x:Name="orangutan" Source="/Assets/Orangutan.png" MaxWidth="500" 
-               HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,173,0,0" Visibility="Collapsed"/>
-            
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" 
-                        Spacing="230" Margin="110,360,0,0">
-                <Button x:ConnectionId='21' x:Name="back" Background="Transparent" 
-            MaxHeight="65" RenderTransformOrigin="0.5,0.5"                   >
-                    <Button.RenderTransform>
-                        <CompositeTransform Rotation="-179.963"/>
-                    </Button.RenderTransform>
-                    <Image x:ConnectionId='24' x:Name="backBImage" Source="/Assets/noflecha.png" />
-                </Button>
-                <Button x:ConnectionId='22' x:Name="next" Background="Transparent" MaxHeight="65"                   >
-                    <Image x:ConnectionId='23' x:Name="nextBImage" Source="/Assets/flecha.png" />
-                </Button>
-
-            </StackPanel>
-
         </Grid>
 
         <!--Menu de opciones-->
@@ -241,17 +254,17 @@
             <TextBlock Text="BRILLO" HorizontalAlignment="Center" Foreground="#785619" 
                        FontSize="40px" FontWeight="Bold" FontFamily="Century Gothic"/>
             <Slider x:ConnectionId='16' x:Name="Brightness" Minimum="0" Maximum="100" Value="100" 
-                    Width="400"                                        />
+                    Width="400"                                        TabIndex="22"/>
 
             <TextBlock Text="MÚSICA" HorizontalAlignment="Center" Foreground="#785619" 
                        FontSize="40px" FontWeight="Bold" FontFamily="Century Gothic"/>
             <Slider x:ConnectionId='17' x:Name="Music" Minimum="0" Maximum="100" Value="0" 
-                    Width="400"                                   />
+                    Width="400"                                   TabIndex="23"/>
 
             <TextBlock Text="EFECTOS DE SONIDO" HorizontalAlignment="Center" Foreground="#785619" 
                        FontSize="40px" FontWeight="Bold" FontFamily="Century Gothic"/>
             <Slider x:ConnectionId='18' x:Name="SoundEffects" Minimum="0" Maximum="100" Value="30" 
-                    Width="400"                                         />
+                    Width="400"                                         TabIndex="24"/>
 
         </StackPanel>
 
@@ -262,20 +275,25 @@
                        FontSize="40px" FontWeight="Bold" FontFamily="Century Gothic"/>
             <StackPanel HorizontalAlignment="Center" Spacing="20" Width="466">
                 <Button x:ConnectionId='12' x:Name="ENGLISH" Content="INGLÉS" Style="{StaticResource MyButtonStyle}" 
-                                                    Width="400" HorizontalAlignment="Center" Height="60"/>
+                                                    Width="400" HorizontalAlignment="Center" 
+                        Height="60" TabIndex="26"/>
                 <Button x:ConnectionId='13' x:Name="FRENCH" Content="FRANCÉS"  Style="{StaticResource MyButtonStyle}" 
-                                                   Width="400" HorizontalAlignment="Center" Height="60"/>
+                                                   Width="400" HorizontalAlignment="Center" 
+                        Height="60" TabIndex="27"/>
                 <Button x:ConnectionId='14' x:Name="SPANISH" Content="ESPAÑOL" Style="{StaticResource MyButtonStyle}" 
-                                                    Width="400" HorizontalAlignment="Center" Height="60"/>
+                                                    Width="400" HorizontalAlignment="Center" 
+                        Height="60" TabIndex="28"/>
                 <Button x:ConnectionId='15' x:Name="GERMAN" Content="ALEMÁN" Style="{StaticResource MyButtonStyle}" 
-                                                   Width="400" HorizontalAlignment="Center" Height="60"/>
+                                                   Width="400" HorizontalAlignment="Center" 
+                        Height="60" TabIndex="29"/>
             </StackPanel>
             <Button x:ConnectionId='11' x:Name="ABOUTUS" Content="SOBRE NOSOTROS" Style="{StaticResource MyButtonStyle}" 
-                                                    Width="500" HorizontalAlignment="Center" Height="100" FontSize="30"/>
+                                                    Width="500" HorizontalAlignment="Center" 
+                    Height="100" FontSize="30" TabIndex="30"/>
         </StackPanel>
 
-
-        <WebView x:ConnectionId='9' x:Name="aboutUs" Source="https://github.com/albpenal/goBanana" Grid.Column="1" Visibility="Collapsed"/>
+        <WebView x:ConnectionId='9' x:Name="aboutUs" Source="https://github.com/albpenal/goBanana" Grid.Column="1" 
+                 Visibility="Collapsed"/>
         <Button x:ConnectionId='10' x:Name ="BackButton" HorizontalAlignment="Left"                          Grid.Column="1"
                 VerticalAlignment="Top" Background="AntiqueWhite" Visibility="Collapsed">
             <SymbolIcon Symbol="Back" />

@@ -43,3 +43,8 @@ C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\(DSI) D
 C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\(DSI) Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\obj\x64\Debug\ProjectArchitectures.txt
 C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\(DSI) Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
 C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\(DSI) Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\obj\x64\Debug\goBanana.csproj.AssemblyReference.cache
+C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\(DSI) Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x64\Debug\IntialPage.xbf
+C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\(DSI) Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\obj\x64\Debug\IntialPage.g.i.cs
+C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\(DSI) Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\obj\x64\Debug\IntialPage.g.cs
+C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\(DSI) Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\obj\x64\Debug\IntialPage.xaml
+C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\(DSI) Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\obj\x64\Debug\IntialPage.xbf

@@ -30,11 +30,14 @@ namespace goBanana
     {
         MediaPlayer music = new MediaPlayer();
         MediaPlayer effect = new MediaPlayer();
+        public int num;
         public MainPage()
         {
             this.InitializeComponent();
+            this.NavigationCacheMode = NavigationCacheMode.Required;
             music.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/music.mp3"));
             music.Play();
+            BananaCount.Text = num.ToString();
             music.IsLoopingEnabled = true;
             music.Volume = 0.0;
 
@@ -44,9 +47,15 @@ namespace goBanana
             SPANISH.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xCD, 0x13));
             JUEGO.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xCD, 0x13));
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            BananaCount.Text = num.ToString();
+        }
+
         private void IncreaseBanana_Click(object sender, RoutedEventArgs e)
         {
-            int num = int.Parse(BananaCount.Text);
+            num = int.Parse(BananaCount.Text);
             BananaCount.Text = (num + 1).ToString();
             ClickHere.Visibility = Visibility.Collapsed;
         }
@@ -171,6 +180,9 @@ namespace goBanana
 
         private void GermanButton_Click(object sender, RoutedEventArgs e)
         {
+            num = int.Parse(BananaCount.Text);
+            Frame.Navigate(typeof(IntialPage), this);
+
             GERMAN.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xCD, 0x13));
             SPANISH.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xDD, 0x5F));
             FRENCH.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xDD, 0x5F));

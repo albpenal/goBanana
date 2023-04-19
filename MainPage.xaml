@@ -48,7 +48,9 @@
                 </TextBlock.RenderTransform>
             </TextBlock>
 
-            <Button Grid.Row="2" Click="IncreaseBanana_Click" MaxHeight="250" MaxWidth="250" HorizontalAlignment="Center" Background="Transparent" Margin="0,65,0,0" VerticalAlignment="Top">
+            <Button Grid.Row="2" Click="IncreaseBanana_Click" MaxHeight="250" MaxWidth="250" 
+                    HorizontalAlignment="Center" Background="Transparent" Margin="0,65,0,0" 
+                    VerticalAlignment="Top" TabIndex="0">
                 <Image Source="/Assets/banana.png" />
             </Button>
 
@@ -67,11 +69,108 @@
 
         <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center"
                     VerticalAlignment="Top" Margin="15,20,0,0" Spacing="35" Height="80" Width="520">
-            <Button x:Name="JUEGO" Content="JUEGO" Style="{StaticResource MyButtonStyle}" Click="GameButton_Click"/>
-            <Button x:Name="SKINS" Content="ASPECTOS"  Style="{StaticResource MyButtonStyle}" Click="SkinsButton_Click"/>
-            <Button x:Name="GLOSARIO" Content="GLOSARIO" Style="{StaticResource MyButtonStyle}" Click="GlosaryButton_Click"/>
+            <Button x:Name="JUEGO" Content="JUEGO" Style="{StaticResource MyButtonStyle}" 
+                    Click="GameButton_Click" TabIndex="1"/>
+            <Button x:Name="SKINS" Content="ASPECTOS"  Style="{StaticResource MyButtonStyle}" 
+                    Click="SkinsButton_Click" TabIndex="11"/>
+            <Button x:Name="GLOSARIO" Content="GLOSARIO" Style="{StaticResource MyButtonStyle}" 
+                    Click="GlosaryButton_Click" TabIndex="15"/>
         </StackPanel>
 
+        <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Bottom"
+                    HorizontalAlignment="Center" Spacing="10" Margin="20" Height="72" Width="288">
+            <Button x:Name="OPCIONES" Content="OPCIONES" Style="{StaticResource MyButtonStyle}" 
+                    Click="OptionsButton_Click" TabIndex="21"/>
+            <Button x:Name="INFO" Content="INFO" Style="{StaticResource MyButtonStyle}" 
+                    Click="InfoButton_Click" TabIndex="25"/>
+        </StackPanel>
+
+        <!--Juego-->
+        <Image x:Name="game" Source="/Assets/canvasMonos.png" Grid.Column="1" MaxWidth="500" 
+               HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,145,0,0"/>
+
+        <!--Menu de skins-->
+        <StackPanel x:Name="skinsButtons" Grid.Column="1" HorizontalAlignment="Center" 
+                    Orientation="Vertical" VerticalAlignment="Center" Spacing="20" Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" 
+                    Spacing="10">
+                <TextBlock Text="Aspecto Actual:" FontFamily="Century Gothic" 
+                           FontSize="35" Foreground="Black" FontWeight="Bold"/>
+                <TextBlock x:Name="CurrentSkin" Text="NINGUNO" FontFamily="Century Gothic" 
+                           FontSize="35" Foreground="Black" FontWeight="Bold"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" >
+                <Button Click="Clown_Click" MaxHeight="140"  HorizontalAlignment="Center" 
+                        Background="Transparent" VerticalAlignment="Top" TabIndex="12">
+                    <Image Source="/Assets/botonestienda.png" />
+                </Button>
+                <Button Click="Viking_Click" MaxHeight="140"  HorizontalAlignment="Center" 
+                        Background="Transparent" VerticalAlignment="Top" TabIndex="13">
+                    <Image Source="/Assets/botonestienda.png" />
+                </Button>
+                <Button x:Name="Desequipar" Content="DESEQUIPAR" HorizontalAlignment="Center"
+                        Style="{StaticResource MyButtonStyle}" Click="Desequipar_Click" Width="150"
+                        Background="#FECD13" TabIndex="14"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel  x:Name="skinsText" Grid.Column="1" VerticalAlignment="Center" Orientation="Vertical" 
+                     Spacing="25" HorizontalAlignment="Center" Visibility="Collapsed">
+            <StackPanel Orientation="Vertical" Spacing="15">
+                <TextBlock x:Name="ClownPrice"  Text="Precio: 10" FontFamily="Century Gothic" 
+                           FontSize="15" Foreground="Black" HorizontalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Vertical" Spacing="5">
+                        <TextBlock VerticalAlignment="Center" Text="Clown" HorizontalAlignment="Center"
+                                   FontFamily="Century Gothic" FontSize="30" Foreground="Black" FontWeight="Bold"/>
+                        <TextBlock VerticalAlignment="Center" x:Name="Clowns" 
+                                   Text="COMPRAR" FontFamily="Century Gothic" FontSize="30" Foreground="Black" FontWeight="Bold"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Spacing="15">
+                <TextBlock x:Name="VikingPrice" Text="Precio: 20" FontFamily="Century Gothic" 
+                           FontSize="15" Foreground="Black" HorizontalAlignment="Center"/>
+
+                <StackPanel Orientation="Vertical" Spacing="5">
+                    <TextBlock VerticalAlignment="Center" Text="Viking" HorizontalAlignment="Center"
+                                   FontFamily="Century Gothic" FontSize="30" 
+                               Foreground="Black" FontWeight="Bold"/>
+                    <TextBlock VerticalAlignment="Center" x:Name="Vikings" 
+                                   Text="COMPRAR" FontFamily="Century Gothic" FontSize="30" 
+                               Foreground="Black" FontWeight="Bold"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+        <!--Simiopedia-->
+        <Grid x:Name="simiopedia" Grid.Column="1" Visibility="Collapsed">
+            <Image x:Name="monete" Source="/Assets/Monete.png" MaxWidth="500" 
+               HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,173,0,0"/>
+
+            <Image x:Name="orangutan" Source="/Assets/Orangutan.png" MaxWidth="500" 
+               HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,173,0,0" Visibility="Collapsed"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                        Spacing="230" Margin="110,360,0,0">
+                <Button x:Name="back" Background="Transparent" 
+            MaxHeight="65" RenderTransformOrigin="0.5,0.5" Click="back_Click" TabIndex="16">
+                    <Button.RenderTransform>
+                        <CompositeTransform Rotation="-179.963"/>
+                    </Button.RenderTransform>
+                    <Image x:Name="backBImage" Source="/Assets/noflecha.png" />
+                </Button>
+                <Button x:Name="next" Background="Transparent" MaxHeight="65" Click="next_Click" TabIndex="17">
+                    <Image x:Name="nextBImage" Source="/Assets/flecha.png" />
+                </Button>
+
+            </StackPanel>
+
+        </Grid>
+
+        <!--Tienda-->
         <Grid Grid.Column="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="48*"/>
@@ -81,13 +180,16 @@
 
             <!--Botones tienda derecha-->
             <StackPanel Orientation="Vertical" Grid.Row="1">
-                <Button Click="BuyCursor_Click" MaxHeight="140"  HorizontalAlignment="Center" Background="Transparent" VerticalAlignment="Top">
+                <Button Click="BuyCursor_Click" MaxHeight="140"  HorizontalAlignment="Center" 
+                        Background="Transparent" VerticalAlignment="Top" TabIndex="18">
                     <Image Source="/Assets/botonestienda.png" />
                 </Button>
-                <Button Click="BuyMonkey_Click" MaxHeight="140"  HorizontalAlignment="Center" Background="Transparent" VerticalAlignment="Top">
+                <Button Click="BuyMonkey_Click" MaxHeight="140"  HorizontalAlignment="Center" 
+                        Background="Transparent" VerticalAlignment="Top" TabIndex="19">
                     <Image Source="/Assets/botonestienda.png" />
                 </Button>
-                <Button Click="BuyTractor_Click" MaxHeight="140"  HorizontalAlignment="Center" Background="Transparent" VerticalAlignment="Top">
+                <Button Click="BuyTractor_Click" MaxHeight="140"  HorizontalAlignment="Center" 
+                        Background="Transparent" VerticalAlignment="Top" TabIndex="20">
                     <Image Source="/Assets/botonestienda.png" />
                 </Button>
             </StackPanel>
@@ -146,112 +248,23 @@
             </StackPanel>
         </Grid>
 
-        <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Bottom"
-                    HorizontalAlignment="Center" Spacing="10" Margin="20" Height="72" Width="288">
-            <Button x:Name="OPCIONES" Content="OPCIONES" Style="{StaticResource MyButtonStyle}" Click="OptionsButton_Click"/>
-            <Button x:Name="INFO" Content="INFO" Style="{StaticResource MyButtonStyle}" Click="InfoButton_Click"/>
-        </StackPanel>
-
-        <!--Juego-->
-        <Image Visibility="Collapsed" x:Name="game" Source="/Assets/canvasMonos.png" Grid.Column="1" MaxWidth="500" 
-               HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,145,0,0"/>
-
-        <!--Menu de skins-->
-        <StackPanel x:Name="skinsButtons" Grid.Column="1" HorizontalAlignment="Center" 
-                    Orientation="Vertical" VerticalAlignment="Center" Spacing="20" Visibility="Collapsed">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" 
-                    Spacing="10">
-                <TextBlock Text="Aspecto Actual:" FontFamily="Century Gothic" 
-                           FontSize="35" Foreground="Black" FontWeight="Bold"/>
-                <TextBlock x:Name="CurrentSkin" Text="NINGUNO" FontFamily="Century Gothic" 
-                           FontSize="35" Foreground="Black" FontWeight="Bold"/>
-            </StackPanel>
-
-            <StackPanel Orientation="Vertical" >
-                <Button Click="Clown_Click" MaxHeight="140"  HorizontalAlignment="Center" Background="Transparent" VerticalAlignment="Top">
-                    <Image Source="/Assets/botonestienda.png" />
-                </Button>
-                <Button Click="Viking_Click" MaxHeight="140"  HorizontalAlignment="Center" Background="Transparent" VerticalAlignment="Top">
-                    <Image Source="/Assets/botonestienda.png" />
-                </Button>
-                <Button x:Name="Desequipar" Content="DESEQUIPAR" HorizontalAlignment="Center"
-                        Style="{StaticResource MyButtonStyle}" Click="Desequipar_Click" Width="150"
-                        Background="#FECD13"/>
-            </StackPanel>
-        </StackPanel>
-
-        <StackPanel  x:Name="skinsText" Grid.Column="1" VerticalAlignment="Center" Orientation="Vertical" 
-                     Spacing="25" HorizontalAlignment="Center" Visibility="Collapsed">
-            <StackPanel Orientation="Vertical" Spacing="15">
-                <TextBlock x:Name="ClownPrice"  Text="Precio: 10" FontFamily="Century Gothic" 
-                           FontSize="15" Foreground="Black" HorizontalAlignment="Center"/>
-                <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
-                    <StackPanel Orientation="Vertical" Spacing="5">
-                        <TextBlock VerticalAlignment="Center" Text="Clown" HorizontalAlignment="Center"
-                                   FontFamily="Century Gothic" FontSize="30" Foreground="Black" FontWeight="Bold"/>
-                        <TextBlock VerticalAlignment="Center" x:Name="Clowns" 
-                                   Text="COMPRAR" FontFamily="Century Gothic" FontSize="30" Foreground="Black" FontWeight="Bold"/>
-                    </StackPanel>
-                </StackPanel>
-            </StackPanel>
-
-            <StackPanel Orientation="Vertical" Spacing="15">
-                <TextBlock x:Name="VikingPrice" Text="Precio: 20" FontFamily="Century Gothic" 
-                           FontSize="15" Foreground="Black" HorizontalAlignment="Center"/>
-
-                <StackPanel Orientation="Vertical" Spacing="5">
-                    <TextBlock VerticalAlignment="Center" Text="Viking" HorizontalAlignment="Center"
-                                   FontFamily="Century Gothic" FontSize="30" 
-                               Foreground="Black" FontWeight="Bold"/>
-                    <TextBlock VerticalAlignment="Center" x:Name="Vikings" 
-                                   Text="COMPRAR" FontFamily="Century Gothic" FontSize="30" 
-                               Foreground="Black" FontWeight="Bold"/>
-                </StackPanel>
-            </StackPanel>
-        </StackPanel>
-
-        <!--Simiopedia-->
-        <Grid x:Name="simiopedia" Grid.Column="1">
-            <Image x:Name="monete" Source="/Assets/Monete.png" MaxWidth="500" 
-               HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,173,0,0"/>
-            
-            <Image x:Name="orangutan" Source="/Assets/Orangutan.png" MaxWidth="500" 
-               HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,173,0,0" Visibility="Collapsed"/>
-            
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" 
-                        Spacing="230" Margin="110,360,0,0">
-                <Button x:Name="back" Background="Transparent" 
-            MaxHeight="65" RenderTransformOrigin="0.5,0.5" Click="back_Click">
-                    <Button.RenderTransform>
-                        <CompositeTransform Rotation="-179.963"/>
-                    </Button.RenderTransform>
-                    <Image x:Name="backBImage" Source="/Assets/noflecha.png" />
-                </Button>
-                <Button x:Name="next" Background="Transparent" MaxHeight="65" Click="next_Click">
-                    <Image x:Name="nextBImage" Source="/Assets/flecha.png" />
-                </Button>
-
-            </StackPanel>
-
-        </Grid>
-
         <!--Menu de opciones-->
         <StackPanel x:Name="options" Grid.Column ="1" HorizontalAlignment="Center" 
                     VerticalAlignment="Center" Height="344" Spacing="20" Visibility="Collapsed">
             <TextBlock Text="BRILLO" HorizontalAlignment="Center" Foreground="#785619" 
                        FontSize="40px" FontWeight="Bold" FontFamily="Century Gothic"/>
             <Slider x:Name="Brightness" Minimum="0" Maximum="100" Value="100" 
-                    Width="400" ValueChanged="brightness_ValueChanged" />
+                    Width="400" ValueChanged="brightness_ValueChanged" TabIndex="22"/>
 
             <TextBlock Text="MÚSICA" HorizontalAlignment="Center" Foreground="#785619" 
                        FontSize="40px" FontWeight="Bold" FontFamily="Century Gothic"/>
             <Slider x:Name="Music" Minimum="0" Maximum="100" Value="0" 
-                    Width="400" ValueChanged="music_ValueChanged" />
+                    Width="400" ValueChanged="music_ValueChanged" TabIndex="23"/>
 
             <TextBlock Text="EFECTOS DE SONIDO" HorizontalAlignment="Center" Foreground="#785619" 
                        FontSize="40px" FontWeight="Bold" FontFamily="Century Gothic"/>
             <Slider x:Name="SoundEffects" Minimum="0" Maximum="100" Value="30" 
-                    Width="400" ValueChanged="soundEffect_ValueChanged" />
+                    Width="400" ValueChanged="soundEffect_ValueChanged" TabIndex="24"/>
 
         </StackPanel>
 
@@ -262,20 +275,25 @@
                        FontSize="40px" FontWeight="Bold" FontFamily="Century Gothic"/>
             <StackPanel HorizontalAlignment="Center" Spacing="20" Width="466">
                 <Button x:Name="ENGLISH" Content="INGLÉS" Style="{StaticResource MyButtonStyle}" 
-                        Click="EnglishButton_Click" Width="400" HorizontalAlignment="Center" Height="60"/>
+                        Click="EnglishButton_Click" Width="400" HorizontalAlignment="Center" 
+                        Height="60" TabIndex="26"/>
                 <Button x:Name="FRENCH" Content="FRANCÉS"  Style="{StaticResource MyButtonStyle}" 
-                        Click="FrenchButton_Click" Width="400" HorizontalAlignment="Center" Height="60"/>
+                        Click="FrenchButton_Click" Width="400" HorizontalAlignment="Center" 
+                        Height="60" TabIndex="27"/>
                 <Button x:Name="SPANISH" Content="ESPAÑOL" Style="{StaticResource MyButtonStyle}" 
-                        Click="SpanishButton_Click" Width="400" HorizontalAlignment="Center" Height="60"/>
+                        Click="SpanishButton_Click" Width="400" HorizontalAlignment="Center" 
+                        Height="60" TabIndex="28"/>
                 <Button x:Name="GERMAN" Content="ALEMÁN" Style="{StaticResource MyButtonStyle}" 
-                        Click="GermanButton_Click" Width="400" HorizontalAlignment="Center" Height="60"/>
+                        Click="GermanButton_Click" Width="400" HorizontalAlignment="Center" 
+                        Height="60" TabIndex="29"/>
             </StackPanel>
             <Button x:Name="ABOUTUS" Content="SOBRE NOSOTROS" Style="{StaticResource MyButtonStyle}" 
-                        Click="AboutUsButton_Click" Width="500" HorizontalAlignment="Center" Height="100" FontSize="30"/>
+                        Click="AboutUsButton_Click" Width="500" HorizontalAlignment="Center" 
+                    Height="100" FontSize="30" TabIndex="30"/>
         </StackPanel>
 
-
-        <WebView x:Name="aboutUs" Source="https://github.com/albpenal/goBanana" Grid.Column="1" Visibility="Collapsed"/>
+        <WebView x:Name="aboutUs" Source="https://github.com/albpenal/goBanana" Grid.Column="1" 
+                 Visibility="Collapsed"/>
         <Button x:Name ="BackButton" HorizontalAlignment="Left" Click="BackButton_Click" Grid.Column="1"
                 VerticalAlignment="Top" Background="AntiqueWhite" Visibility="Collapsed">
             <SymbolIcon Symbol="Back" />
