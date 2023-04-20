@@ -86,7 +86,6 @@ namespace goBanana
             info.Visibility = Visibility.Collapsed;
             game.Visibility = Visibility.Collapsed;
             skinsButtons.Visibility = Visibility.Collapsed;
-            skinsText.Visibility = Visibility.Collapsed;
             simiopedia.Visibility = Visibility.Collapsed;
         }
 
@@ -102,7 +101,6 @@ namespace goBanana
             options.Visibility = Visibility.Collapsed;
             game.Visibility = Visibility.Collapsed;
             skinsButtons.Visibility = Visibility.Collapsed;
-            skinsText.Visibility = Visibility.Collapsed;
             simiopedia.Visibility = Visibility.Collapsed;
         }
 
@@ -118,7 +116,6 @@ namespace goBanana
             options.Visibility = Visibility.Collapsed;
             info.Visibility = Visibility.Collapsed;
             skinsButtons.Visibility = Visibility.Collapsed;
-            skinsText.Visibility = Visibility.Collapsed;
             simiopedia.Visibility = Visibility.Collapsed;
         }
 
@@ -131,7 +128,6 @@ namespace goBanana
             GLOSARIO.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xDD, 0x5F));
 
             skinsButtons.Visibility = Visibility.Visible;
-            skinsText.Visibility = Visibility.Visible;
             options.Visibility = Visibility.Collapsed;
             info.Visibility = Visibility.Collapsed;
             game.Visibility = Visibility.Collapsed;
@@ -146,12 +142,13 @@ namespace goBanana
             SKINS.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xDD, 0x5F));
             OPCIONES.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xDD, 0x5F));
 
+            backBImage.Opacity = 0.3;
+
             simiopedia.Visibility = Visibility.Visible;
             options.Visibility = Visibility.Collapsed;
             info.Visibility = Visibility.Collapsed;
             game.Visibility = Visibility.Collapsed;
             skinsButtons.Visibility = Visibility.Collapsed;
-            skinsText.Visibility = Visibility.Collapsed;
         }
 
         private void EnglishButton_Click(object sender, RoutedEventArgs e)
@@ -296,14 +293,11 @@ namespace goBanana
             monete.Visibility = Visibility.Collapsed;
             orangutan.Visibility = Visibility.Visible;
 
-            //string s = System.IO.Directory.GetCurrentDirectory() + "\\" + "Assets\\noflecha.jpg";
-            //nextBImage.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(s));
+            nextBImage.Opacity = 0.3;
+            backBImage.Opacity = 1;
 
-            //s = System.IO.Directory.GetCurrentDirectory() + "\\" + "Assets\\flecha.jpg";
-            //backBImage.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(s));
-
-            //nextBImage.Source = new BitmapImage(new Uri("Assets/noflecha.jpg", UriKind.Relative));
-            //backBImage.Source = new BitmapImage(new Uri("Assets/flecha.jpg", UriKind.Relative));
+            next.IsEnabled = false;
+            back.IsEnabled = true;
         }
 
         private void back_Click(object sender, RoutedEventArgs e)
@@ -311,14 +305,11 @@ namespace goBanana
             monete.Visibility = Visibility.Visible;
             orangutan.Visibility = Visibility.Collapsed;
 
-            //string s = System.IO.Directory.GetCurrentDirectory() + "\\" + "Assets\\flecha.jpg";
-            //nextBImage.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(s));
+            nextBImage.Opacity = 1;
+            backBImage.Opacity = 0.3;
 
-            //nextBImage.Source = new BitmapImage(new Uri("Assets/flecha.jpg", UriKind.Relative));
-            //backBImage.Source = new BitmapImage(new Uri("Assets/noflecha.jpg", UriKind.Relative));
-
-            //s = System.IO.Directory.GetCurrentDirectory() + "\\" + "Assets\\noflecha.jpg";
-            //backBImage.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(s));
+            next.IsEnabled = true;
+            back.IsEnabled = false;
         }
         private async void GoGithub_Click(object sender, RoutedEventArgs e)
         {
