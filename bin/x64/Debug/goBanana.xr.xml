@@ -82,8 +82,6 @@
       <RootProperty Name="MaxHeight" />
       <RootProperty Name="IsTapEnabled" />
       <RootProperty Name="AllowDrop" />
-      <RootEvent Name="Drop" />
-      <RootEvent Name="DragOver" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />

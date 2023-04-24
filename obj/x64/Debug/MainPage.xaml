@@ -87,9 +87,10 @@
 
             </Grid.RowDefinitions>
 
-            <Viewbox Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Uniform" MaxWidth="650" Margin="10">
+            <Viewbox Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" 
+                     Stretch="Uniform" MaxWidth="650" Margin="10">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
-                    VerticalAlignment="Center" Spacing="35">
+                    VerticalAlignment="Center" Spacing="45">
                     <Button x:ConnectionId='42' x:Name="JUEGO" Content="JUEGO" Style="{StaticResource MyButtonStyle}" 
                                              TabIndex="1"/>
                     <Button x:ConnectionId='43' x:Name="SKINS" Content="ASPECTOS" Style="{StaticResource MyButtonStyle}" 
@@ -104,13 +105,15 @@
 
             <!--Juego-->
             <Viewbox Stretch="Uniform" Grid.Row="1" Margin="20,20,20,20">
-                <Grid>
-                    <Image x:ConnectionId='40' x:Name="game" Source="/Assets/canvasMonos.png" Grid.Column="1" MaxWidth="500" MaxHeight="500"
-                    HorizontalAlignment="Center" VerticalAlignment="Top"                   
-                           IsTapEnabled="True"  AllowDrop="True"                          />
-                    <Canvas x:ConnectionId='41' x:Name="MiCanvas" MaxWidth="500" MaxHeight="500"/>
-                </Grid>
-                
+                <!--<ScrollViewer  x:Name="scrollViewer" Grid.Row="1"  ZoomMode="Enabled" HorizontalScrollBarVisibility="Visible" IsTabStop="True" 
+                                   IsFocusEngagementEnabled="True" XYFocusKeyboardNavigation="Enabled">-->
+                    <Grid>
+                        <Image x:ConnectionId='40' x:Name="game" Source="/Assets/canvasMonos.png" Grid.Column="1" MaxWidth="500" MaxHeight="500"
+                            HorizontalAlignment="Center" VerticalAlignment="Top"
+                           IsTapEnabled="True"  AllowDrop="True" />
+                        <Canvas x:ConnectionId='41' x:Name="MiCanvas" MaxWidth="500" MaxHeight="500" />
+                    </Grid>
+                <!--</ScrollViewer>-->
             </Viewbox>
 
 

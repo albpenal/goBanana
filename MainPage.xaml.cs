@@ -42,6 +42,11 @@ namespace goBanana
         MediaPlayer effect = new MediaPlayer();
         public int num;
         ContentControl selectedObject;
+
+        public DispatcherTimer GameTimer;
+        private Gamepad mando;
+        public GamepadReading estadoActual;
+        double X = 0, Y = 0;
         public MainPage()
         {
             this.InitializeComponent();
@@ -62,6 +67,10 @@ namespace goBanana
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += Timer_Tick;
             timer.Start();
+
+            Gamepad.GamepadAdded += OnGamepadAdded;
+            Gamepad.GamepadRemoved += OnGamepadRemoved;
+            GameTimerSetup();
         }
 
         private void Timer_Tick(object sender, object e)
@@ -83,20 +92,7 @@ namespace goBanana
             ClickHere.Visibility = Visibility.Collapsed;
         }
 
-        private void music_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
-        {
-            music.Volume = e.NewValue / 100.0;
-        }
-
-        private void brightness_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
-        {
-            general.Opacity = e.NewValue / 100.0 + 0.1;
-        }
-        private void soundEffect_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
-        {
-            effect.Volume = e.NewValue / 100.0;
-        }
-
+        #region MENUS
         private void OptionsButton_Click(object sender, RoutedEventArgs e)
         {
             OPCIONES.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xCD, 0x13));
@@ -170,7 +166,10 @@ namespace goBanana
             OPCIONES.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xDD, 0x5F));
 
             backBImage.Opacity = 0.3;
+            nextBImage.Opacity = 1;
 
+            monete.Visibility = Visibility.Visible;
+            orangutan.Visibility = Visibility.Collapsed;
             simiopedia.Visibility = Visibility.Visible;
             options.Visibility = Visibility.Collapsed;
             info.Visibility = Visibility.Collapsed;
@@ -178,7 +177,25 @@ namespace goBanana
             MiCanvas.Opacity = 0.01;
             skinsButtons.Visibility = Visibility.Collapsed;
         }
+        #endregion
 
+        #region OPCIONES
+        private void music_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            music.Volume = e.NewValue / 100.0;
+        }
+
+        private void brightness_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            general.Opacity = e.NewValue / 100.0 + 0.1;
+        }
+        private void soundEffect_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            effect.Volume = e.NewValue / 100.0;
+        }
+        #endregion
+
+        #region INFO
         private void EnglishButton_Click(object sender, RoutedEventArgs e)
         {
             ENGLISH.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xCD, 0x13));
@@ -214,35 +231,18 @@ namespace goBanana
             ENGLISH.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xDD, 0x5F));
         }
 
-        private void AboutUsButton_Click(object sender, RoutedEventArgs e)
+        private async void GoGithub_Click(object sender, RoutedEventArgs e)// ir a GitHub
         {
             music.Pause();
-            info.Visibility = Visibility.Collapsed;
-            //aboutUs.Visibility = Visibility.Visible;
-            //BackButton.Visibility = Visibility.Visible;
-            JUEGO.Visibility = Visibility.Collapsed;
-            SKINS.Visibility = Visibility.Collapsed;
-            GLOSARIO.Visibility = Visibility.Collapsed;
-            INFO.Visibility = Visibility.Collapsed;
-            OPCIONES.Visibility = Visibility.Collapsed;
+            Uri uri = new Uri("https://github.com/albpenal/goBanana");
+            var success = await Windows.System.Launcher.LaunchUriAsync(uri);
         }
+        #endregion
 
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            music.Play();
-            info.Visibility = Visibility.Visible;
-            //aboutUs.Visibility = Visibility.Collapsed;
-            //BackButton.Visibility =Visibility.Collapsed;
-            JUEGO.Visibility = Visibility.Visible;
-            SKINS.Visibility = Visibility.Visible;
-            GLOSARIO.Visibility = Visibility.Visible;
-            INFO.Visibility = Visibility.Visible;
-            OPCIONES.Visibility = Visibility.Visible;
-        }
-
+        #region TIENDA
         private void BuyCursor_Click(object sender, RoutedEventArgs e)
         {
-            if(int.Parse(CursorPrice.Text) <= int.Parse(BananaCount.Text))
+            if (int.Parse(CursorPrice.Text) <= int.Parse(BananaCount.Text))
             {
                 NumberOfCursors.Text = (int.Parse(NumberOfCursors.Text) + 1).ToString();
                 BananaCount.Text = (int.Parse(BananaCount.Text) - int.Parse(CursorPrice.Text)).ToString();
@@ -258,7 +258,7 @@ namespace goBanana
                 // actualizaciones de numeros
                 NumberOfMonkeys.Text = (int.Parse(NumberOfMonkeys.Text) + 1).ToString();
                 BananaCount.Text = (int.Parse(BananaCount.Text) - int.Parse(MonkeyPrice.Text)).ToString();
-                MonkeyPrice.Text = (int.Parse(MonkeyPrice.Text) + 0).ToString();
+                MonkeyPrice.Text = (int.Parse(MonkeyPrice.Text) + 50).ToString();
                 BananasPerSec.Text = (int.Parse(BananasPerSec.Text) + 10).ToString();
 
                 // creacion de mono en el canvas
@@ -267,19 +267,19 @@ namespace goBanana
                 string s = System.IO.Directory.GetCurrentDirectory() + "\\" + "Assets\\mono1.png";
                 bi.UriSource = new Uri(s);
                 myImage.Source = bi;
-                //myImage.CanDrag = true;
-                //myImage.PointerPressed += ItemClick;
                 Random rnd = new Random();
                 int x = rnd.Next(0, (int)MiCanvas.ActualWidth - 50);
-                int y = rnd.Next(-75, (int)MiCanvas.ActualHeight - 125);
+                int y = rnd.Next(0, (int)MiCanvas.ActualHeight - 125);
 
                 myImage.MaxWidth = 50; // Establece un ancho fijo para la imagen
-                Canvas.SetLeft(myImage, x);
-                Canvas.SetTop(myImage, y);
+                myImage.SetValue(Canvas.LeftProperty, rnd.NextDouble() * (MiCanvas.ActualWidth - myImage.Width)); // Posición aleatoria en el eje X
+                myImage.SetValue(Canvas.TopProperty, rnd.NextDouble() * (MiCanvas.ActualHeight - myImage.Height)); // Posición aleatoria en el eje Y
 
                 ContentControl c = new ContentControl();
                 c.Content = myImage;
                 c.IsTabStop = true;
+                c.IsFocusEngagementEnabled = true;
+                c.UseSystemFocusVisuals = true;
                 c.PointerPressed += ItemClick;
                 MiCanvas.Children.Add(c);
 
@@ -290,16 +290,34 @@ namespace goBanana
                 c.RenderTransform = Transformacion;
                 c.ManipulationMode = ManipulationModes.All;
                 c.ManipulationDelta += NewImg_ManipulationDelta;
+
+                selectedObject = c;
             }
         }
+        private void BuyTractor_Click(object sender, RoutedEventArgs e)// comprar tractor
+        {
+            if (int.Parse(TractorPrice.Text) <= int.Parse(BananaCount.Text))
+            {
+                NumberOfTractors.Text = (int.Parse(NumberOfTractors.Text) + 1).ToString();
+                BananaCount.Text = (int.Parse(BananaCount.Text) - int.Parse(TractorPrice.Text)).ToString();
+                TractorPrice.Text = (int.Parse(TractorPrice.Text) + 2000).ToString();
+            }
+        }
+        #endregion
 
+        #region MOVIMIENTO MONOS
         private void NewImg_ManipulationDelta(object sender, ManipulationDeltaRoutedEventArgs e)
         {
             CompositeTransform Transformacion = ((sender as ContentControl).RenderTransform as CompositeTransform);
-            Transformacion.TranslateX += e.Delta.Translation.X;
-            Transformacion.TranslateY += e.Delta.Translation.Y;
-            Transformacion.Rotation += e.Delta.Rotation;
-            (sender as ContentControl).RenderTransform = Transformacion;
+            if (Transformacion.TranslateX + e.Delta.Translation.X >= (int)MiCanvas.ActualWidth - 50 || Transformacion.TranslateX + e.Delta.Translation.X <= 0) Transformacion.TranslateX += 0;
+            else if (Transformacion.TranslateY + e.Delta.Translation.Y >= (int)MiCanvas.ActualHeight - 50 || Transformacion.TranslateY + e.Delta.Translation.Y <= 0) Transformacion.TranslateY += 0;
+            else
+            {
+                Transformacion.TranslateX += e.Delta.Translation.X;
+                Transformacion.TranslateY += e.Delta.Translation.Y;
+                Transformacion.Rotation += e.Delta.Rotation;
+            }
+    (sender as ContentControl).RenderTransform = Transformacion;
         }
 
         private void ItemClick(object sender, PointerRoutedEventArgs e)
@@ -310,44 +328,90 @@ namespace goBanana
             }
         }
 
-        private void Image_DragOver(object sender, DragEventArgs e)
+        #endregion
+
+        #region MANDO
+        private void OnGamepadAdded(object sender, Gamepad e)
         {
-           // e.AcceptedOperation = DataPackageOperation.Copy;
-        }
-
-        private async void Image_Drop(object sender, DragEventArgs e)
-        {
-            //var id = await e.DataView.GetTextAsync();
-            //var number = int.Parse(id);
-
-            MiCanvas.Children.Remove(selectedObject);
-
-            ContentControl c = selectedObject;
-            MiCanvas.Children.Add(c);
-
-
-            Point PD = e.GetPosition(MiCanvas);
-
-            CompositeTransform Transformacion = new CompositeTransform();
-            Transformacion.TranslateX = PD.X;
-            Transformacion.TranslateY = PD.Y - 70;
-            Transformacion.Rotation = 0;
-            c.RenderTransform = Transformacion;
-            c.ManipulationMode = ManipulationModes.All;
-            c.ManipulationDelta += NewImg_ManipulationDelta;
-        }
-
-        private void BuyTractor_Click(object sender, RoutedEventArgs e)
-        {
-            if (int.Parse(TractorPrice.Text) <= int.Parse(BananaCount.Text))
+            if (mando == null)
             {
-                NumberOfTractors.Text = (int.Parse(NumberOfTractors.Text) + 1).ToString();
-                BananaCount.Text = (int.Parse(BananaCount.Text) - int.Parse(TractorPrice.Text)).ToString();
-                TractorPrice.Text = (int.Parse(TractorPrice.Text) + 2000).ToString();
+                mando = e;
             }
         }
 
-        private void Clown_Click(object sender, RoutedEventArgs e)
+        private void OnGamepadRemoved(object sender, Gamepad e)
+        {
+            if (mando == e)
+            {
+                mando = null;
+            }
+        }
+        public void ZMMando()
+        {
+            if (estadoActual.RightThumbstickX < -0.1) estadoActual.RightThumbstickX += 0.1;
+            else if (estadoActual.RightThumbstickX > 0.1) estadoActual.RightThumbstickX -= 0.1;
+            else estadoActual.RightThumbstickX = 0;
+
+            if (estadoActual.RightThumbstickY < -0.1) estadoActual.RightThumbstickY += 0.1;
+            else if (estadoActual.RightThumbstickY > 0.1) estadoActual.RightThumbstickY -= 0.1;
+            else estadoActual.RightThumbstickY = 0;
+        }
+
+        public void ActualizarEstado()
+        {
+            double rightStickX = estadoActual.RightThumbstickX; // returns a value between -1.0 and +1.0
+            estadoActual = mando.GetCurrentReading();
+        }
+
+        public void GameTimerSetup()
+        {
+            GameTimer = new DispatcherTimer();
+            GameTimer.Tick += GameTimer_Tick;// dispatcherTimer_Tick;
+            GameTimer.Interval = new TimeSpan(100); //100000*10^-7s=1cs;
+            GameTimer.Start();
+
+        }
+
+        void GameTimer_Tick(object sender, object e)
+        {   //Los Drones se simulan a nivel de aplicación cada 0.1s
+            if (mando != null)
+            {
+                ActualizarEstado();
+                ActualizaIU();
+                ZMMando();
+            }
+
+        }
+
+        private void ActualizaIU()// actualiza movimiento de monos con mando
+        {
+            if (mando != null)
+            {
+                X = Y = 0;
+                selectedObject = FocusManager.GetFocusedElement() as ContentControl;
+                if (selectedObject != null && selectedObject.Parent == MiCanvas)
+                {
+                    X = (double)(X + 2 * estadoActual.RightThumbstickX);
+                    Y = (double)(Y - 2 * estadoActual.RightThumbstickY);
+
+                    CompositeTransform Transformacion = selectedObject.RenderTransform as CompositeTransform;
+
+                    if (Transformacion.TranslateX + X >= (int)MiCanvas.ActualWidth - 50 || Transformacion.TranslateX + X <= 0) Transformacion.TranslateX += 0;
+                    else if (Transformacion.TranslateY + Y >= (int)MiCanvas.ActualHeight - 50 || Transformacion.TranslateY + Y <= 0) Transformacion.TranslateY += 0;
+                    else
+                    {
+                        Transformacion.TranslateX += X;
+                        Transformacion.TranslateY += Y;
+                    }
+
+                    selectedObject.RenderTransform = Transformacion;
+                }
+            }
+        }
+        #endregion
+
+        #region SKINS
+        private void Clown_Click(object sender, RoutedEventArgs e)// equipar/comprar payaso
         {
             if (Clowns.Text == "COMPRAR" && 10 <= int.Parse(BananaCount.Text))
             {
@@ -355,7 +419,7 @@ namespace goBanana
                 ClownPrice.Text = "Equipar";
                 Clowns.Text = "COMPRADO";
             }
-            else if(Clowns.Text == "COMPRADO" && ClownPrice.Text == "Equipar")
+            else if (Clowns.Text == "COMPRADO" && ClownPrice.Text == "Equipar")
             {
                 Desequipar.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xDD, 0x5F));
                 CurrentSkin.Text = "PAYASO";
@@ -364,7 +428,7 @@ namespace goBanana
             }
         }
 
-        private void Viking_Click(object sender, RoutedEventArgs e)
+        private void Viking_Click(object sender, RoutedEventArgs e)// equipar/comprar vikingo
         {
             Desequipar.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xDD, 0x5F));
             if (Vikings.Text == "COMPRAR" && 20 <= int.Parse(BananaCount.Text))
@@ -381,17 +445,19 @@ namespace goBanana
             }
         }
 
-        private void Desequipar_Click(object sender, RoutedEventArgs e) 
-        { 
+        private void Desequipar_Click(object sender, RoutedEventArgs e) // boton desequipar
+        {
             Desequipar.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xCD, 0x13));
 
             CurrentSkin.Text = "NINGUNO";
 
-            if(ClownPrice.Text == "Equipado") ClownPrice.Text = "Equipar";
+            if (ClownPrice.Text == "Equipado") ClownPrice.Text = "Equipar";
             else if (VikingPrice.Text == "Equipado") VikingPrice.Text = "Equipar";
         }
+        #endregion
 
-        private void next_Click(object sender, RoutedEventArgs e)
+        #region GLOSARIO
+        private void next_Click(object sender, RoutedEventArgs e)// boton ir hacia delante
         {
             monete.Visibility = Visibility.Collapsed;
             orangutan.Visibility = Visibility.Visible;
@@ -403,7 +469,7 @@ namespace goBanana
             back.IsEnabled = true;
         }
 
-        private void back_Click(object sender, RoutedEventArgs e)
+        private void back_Click(object sender, RoutedEventArgs e)// boton ir hacia atras glosario
         {
             monete.Visibility = Visibility.Visible;
             orangutan.Visibility = Visibility.Collapsed;
@@ -414,10 +480,6 @@ namespace goBanana
             next.IsEnabled = true;
             back.IsEnabled = false;
         }
-        private async void GoGithub_Click(object sender, RoutedEventArgs e)
-        {
-            Uri uri = new Uri("https://github.com/albpenal/goBanana");
-            var success = await Windows.System.Launcher.LaunchUriAsync(uri);
-        }
+        #endregion
     }
 }
