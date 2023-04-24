@@ -1,12 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Core;
+using Windows.ApplicationModel.DataTransfer;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.Media.Core;
-using Windows.Media.Playback;
+using Windows.Gaming.Input;
+using Windows.Storage;
+using Windows.System;
+using Windows.UI.Core;
+using Windows.UI.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -15,9 +21,12 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+using Windows.Media.Core;
+using Windows.Media.Playback;
 using Windows.UI;
 using System.Diagnostics;
 using Windows.Devices.Enumeration;
+
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
 
@@ -32,6 +41,7 @@ namespace goBanana
         MediaPlayer music = new MediaPlayer();
         MediaPlayer effect = new MediaPlayer();
         public int num;
+        ContentControl selectedObject;
         public MainPage()
         {
             this.InitializeComponent();
@@ -257,6 +267,8 @@ namespace goBanana
                 string s = System.IO.Directory.GetCurrentDirectory() + "\\" + "Assets\\mono1.png";
                 bi.UriSource = new Uri(s);
                 myImage.Source = bi;
+                //myImage.CanDrag = true;
+                //myImage.PointerPressed += ItemClick;
                 Random rnd = new Random();
                 int x = rnd.Next(0, (int)MiCanvas.ActualWidth - 50);
                 int y = rnd.Next(-75, (int)MiCanvas.ActualHeight - 125);
@@ -264,8 +276,65 @@ namespace goBanana
                 myImage.MaxWidth = 50; // Establece un ancho fijo para la imagen
                 Canvas.SetLeft(myImage, x);
                 Canvas.SetTop(myImage, y);
-                MiCanvas.Children.Add(myImage);
+
+                ContentControl c = new ContentControl();
+                c.Content = myImage;
+                c.IsTabStop = true;
+                c.PointerPressed += ItemClick;
+                MiCanvas.Children.Add(c);
+
+                CompositeTransform Transformacion = new CompositeTransform();
+                Transformacion.TranslateX = x;
+                Transformacion.TranslateY = y;
+                Transformacion.Rotation = 0;
+                c.RenderTransform = Transformacion;
+                c.ManipulationMode = ManipulationModes.All;
+                c.ManipulationDelta += NewImg_ManipulationDelta;
             }
+        }
+
+        private void NewImg_ManipulationDelta(object sender, ManipulationDeltaRoutedEventArgs e)
+        {
+            CompositeTransform Transformacion = ((sender as ContentControl).RenderTransform as CompositeTransform);
+            Transformacion.TranslateX += e.Delta.Translation.X;
+            Transformacion.TranslateY += e.Delta.Translation.Y;
+            Transformacion.Rotation += e.Delta.Rotation;
+            (sender as ContentControl).RenderTransform = Transformacion;
+        }
+
+        private void ItemClick(object sender, PointerRoutedEventArgs e)
+        {
+            if (e.OriginalSource != null)
+            {
+                selectedObject = e.OriginalSource as ContentControl;
+            }
+        }
+
+        private void Image_DragOver(object sender, DragEventArgs e)
+        {
+           // e.AcceptedOperation = DataPackageOperation.Copy;
+        }
+
+        private async void Image_Drop(object sender, DragEventArgs e)
+        {
+            //var id = await e.DataView.GetTextAsync();
+            //var number = int.Parse(id);
+
+            MiCanvas.Children.Remove(selectedObject);
+
+            ContentControl c = selectedObject;
+            MiCanvas.Children.Add(c);
+
+
+            Point PD = e.GetPosition(MiCanvas);
+
+            CompositeTransform Transformacion = new CompositeTransform();
+            Transformacion.TranslateX = PD.X;
+            Transformacion.TranslateY = PD.Y - 70;
+            Transformacion.Rotation = 0;
+            c.RenderTransform = Transformacion;
+            c.ManipulationMode = ManipulationModes.All;
+            c.ManipulationDelta += NewImg_ManipulationDelta;
         }
 
         private void BuyTractor_Click(object sender, RoutedEventArgs e)

@@ -106,7 +106,8 @@
             <Viewbox Stretch="Uniform" Grid.Row="1" Margin="20,20,20,20">
                 <Grid>
                     <Image x:ConnectionId='40' x:Name="game" Source="/Assets/canvasMonos.png" Grid.Column="1" MaxWidth="500" MaxHeight="500"
-                    HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    HorizontalAlignment="Center" VerticalAlignment="Top"                   
+                           IsTapEnabled="True"  AllowDrop="True"                          />
                     <Canvas x:ConnectionId='41' x:Name="MiCanvas" MaxWidth="500" MaxHeight="500"/>
                 </Grid>
                 
