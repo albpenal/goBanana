@@ -44,15 +44,6 @@
             </Grid.RowDefinitions>
 
 
-
-            <Viewbox Stretch="Uniform" Grid.Row="2">
-                <Grid>
-                    <Button Click="IncreaseBanana_Click" Background="Transparent" Margin="40,0,40,0" 
-                    VerticalAlignment="Top" TabIndex="0">
-                        <Image Source="/Assets/banana.png" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Button>
-                </Grid>
-            </Viewbox>
             <Viewbox Stretch="Uniform" Grid.Row="2">
                 <TextBlock x:Name="ClickHere" Margin="0,0,0,200" Text="CLICK HERE" FontSize="80" Foreground="White" FontFamily="Century Gothic" FontWeight="Bold"
                    VerticalAlignment="Center" TextAlignment="Center" Grid.Column="0" HorizontalAlignment="Center" Width="486" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
@@ -61,6 +52,15 @@
                     </TextBlock.RenderTransform>
                 </TextBlock>
             </Viewbox>
+            <Viewbox Stretch="Uniform" Grid.Row="2">
+                <Grid>
+                    <Button Click="IncreaseBanana_Click" Background="Transparent" Margin="40,0,40,0" 
+                    VerticalAlignment="Top" TabIndex="0">
+                        <Image Source="/Assets/banana.png" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Button>
+                </Grid>
+            </Viewbox>
+            
 
             <Viewbox Stretch="Uniform" Grid.Row="1">
                 <StackPanel Orientation="Vertical" Spacing="5" Grid.Row="1" Margin="0,0,5,0">
@@ -90,11 +90,11 @@
             <Viewbox Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Uniform" MaxWidth="650" Margin="10">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
                     VerticalAlignment="Center" Spacing="35">
-                    <Button x:Name="JUEGO" Content="JUEGO" HorizontalAlignment="Left" Style="{StaticResource MyButtonStyle}" 
+                    <Button x:Name="JUEGO" Content="JUEGO" Style="{StaticResource MyButtonStyle}" 
                     Click="GameButton_Click" TabIndex="1"/>
-                    <Button x:Name="SKINS" Content="ASPECTOS"  HorizontalAlignment="Center" Style="{StaticResource MyButtonStyle}" 
-                    Click="SkinsButton_Click" TabIndex="11"/>
-                    <Button x:Name="GLOSARIO" Content="GLOSARIO" HorizontalAlignment="Right" Style="{StaticResource MyButtonStyle}" 
+                    <Button x:Name="SKINS" Content="ASPECTOS" Style="{StaticResource MyButtonStyle}" 
+                    Click="SkinsButton_Click" TabIndex="11" IsTabStop="True"/>
+                    <Button x:Name="GLOSARIO" Content="GLOSARIO" Style="{StaticResource MyButtonStyle}" 
                     Click="GlosaryButton_Click" TabIndex="15"/>
                 </StackPanel>
             </Viewbox>
@@ -104,8 +104,12 @@
 
             <!--Juego-->
             <Viewbox Stretch="Uniform" Grid.Row="1" Margin="20,20,20,20">
-                <Image x:Name="game" Source="/Assets/canvasMonos.png" Grid.Column="1" MaxWidth="500" 
-               HorizontalAlignment="Center" VerticalAlignment="Top"  Height="494" Width="500"/>
+                <Grid>
+                    <Image x:Name="game" Source="/Assets/canvasMonos.png" Grid.Column="1" MaxWidth="500" MaxHeight="500"
+                    HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <Canvas x:Name="MiCanvas" MaxWidth="500" MaxHeight="500"/>
+                </Grid>
+                
             </Viewbox>
 
 
@@ -237,7 +241,7 @@
                         Height="60" TabIndex="29"/>
                     </StackPanel>
                     <Button x:Name="ABOUTUS" Content="SOBRE NOSOTROS" Style="{StaticResource MyButtonStyle}" 
-                        Click="AboutUsButton_Click" Width="500" HorizontalAlignment="Center" 
+                        Click="GoGithub_Click" Width="500" HorizontalAlignment="Center" 
                     Height="100" FontSize="30" TabIndex="30"/>
                 </StackPanel>
             </Viewbox>
@@ -336,19 +340,12 @@
 
 
 
-        <WebView x:Name="aboutUs" Source="https://github.com/albpenal/goBanana" Grid.Column="1" 
+        <!--<WebView x:Name="aboutUs" Source="https://github.com/albpenal/goBanana" Grid.Column="1" 
                  Visibility="Collapsed"/>
         <Button x:Name ="BackButton" Click="BackButton_Click" Grid.Column="1" Background="AntiqueWhite" Visibility="Collapsed" Height="0" Width="0">
             <SymbolIcon Symbol="Back" />
-        </Button>
+        </Button>-->
 
-        <!--<StackPanel x:Name="aboutUs" Grid.Column ="1" HorizontalAlignment="Center" 
-                    VerticalAlignment="Center" Height="720" Spacing="5" Visibility="Visible" Orientation="Vertical" Width="557">
-            <Button HorizontalAlignment="Left" Click="BackButton_Click">
-                <SymbolIcon Symbol="Back" />
-            </Button>
-            <WebView x:Name="aboutUs" Source="https://github.com/albpenal/goBanana" Grid.Column="1"/>
-        </StackPanel>-->
 
     </Grid>
 </Page>

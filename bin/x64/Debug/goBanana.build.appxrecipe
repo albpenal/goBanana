@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-R08OFDJ</Machine>
-    <WindowsUser>sofsa</WindowsUser>
+    <Machine>DESKTOP-A2DQHK0</Machine>
+    <WindowsUser>trowsky</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,22 +10,22 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>f2ef3b15-eabd-4dd6-8782-c2a083578a0b</PackageIdentityName>
     <PackageIdentityPublisher>CN=trowsky</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>D:\GitHub\Otros proyectos\DSI\goBanana\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x64\Debug\AppX</LayoutDir>
+    <LayoutDir>D:\GitHub\Otros proyectos\DSI\goBanana\bin\x64\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="D:\GitHub\Otros proyectos\DSI\goBanana\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x64\Debug\goBanana.exe">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\bin\x64\Debug\goBanana.exe">
       <PackagePath>entrypoint\goBanana.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
@@ -34,91 +34,97 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\background.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\background.png">
       <PackagePath>Assets\background.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\banana.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\banana.png">
       <PackagePath>Assets\banana.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\botonestienda.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\botonestienda.png">
       <PackagePath>Assets\botonestienda.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\canvasMonos.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\canvasMonos.png">
       <PackagePath>Assets\canvasMonos.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\cursor.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\cursor.png">
       <PackagePath>Assets\cursor.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\flecha.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\flecha.png">
       <PackagePath>Assets\flecha.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\monete.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\monete.png">
       <PackagePath>Assets\monete.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\monkey.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\monkey.png">
       <PackagePath>Assets\monkey.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\noflecha.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\mono1.png">
+      <PackagePath>Assets\mono1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\mono2.png">
+      <PackagePath>Assets\mono2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\noflecha.png">
       <PackagePath>Assets\noflecha.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\orangutan.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\orangutan.png">
       <PackagePath>Assets\orangutan.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\tractor.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\tractor.png">
       <PackagePath>Assets\tractor.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Assets\music.mp3">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Assets\music.mp3">
       <PackagePath>Assets\music.mp3</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x64\Debug\goBanana.xr.xml">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\bin\x64\Debug\goBanana.xr.xml">
       <PackagePath>goBanana.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x64\Debug\IntialPage.xbf">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\bin\x64\Debug\IntialPage.xbf">
       <PackagePath>IntialPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sofsa\OneDrive\Escritorio\Trabajos de Sofía\Segundo de carrera\%28DSI%29 Desarrollo de Sistemas Interactivos\Hitos\Hito 5, 6 y 7\goBanana\bin\x64\Debug\Core\goBanana.exe">
+    <AppxPackagedFile Include="D:\GitHub\Otros proyectos\DSI\goBanana\bin\x64\Debug\Core\goBanana.exe">
       <PackagePath>goBanana.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

@@ -8,10 +8,10 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Viewbox Stretch="Fill">
+    <Viewbox Stretch="Uniform" Margin="20">
         <Grid>
-            <Button x:ConnectionId='2'                      Content="PRESIONA PARA VOLVER AL JUEGO DESDE LA PÁGINA DE MEJORA" 
-                       HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent"/>
+            <Button x:ConnectionId='2'                      Content="VOLVER AL JUEGO" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center" Background="Lavender"/>
         </Grid>
     </Viewbox>
     

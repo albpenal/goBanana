@@ -28,6 +28,7 @@ namespace goBanana
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        int MaxMonkeys = 10;
         MediaPlayer music = new MediaPlayer();
         MediaPlayer effect = new MediaPlayer();
         public int num;
@@ -46,6 +47,18 @@ namespace goBanana
 
             SPANISH.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xCD, 0x13));
             JUEGO.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xCD, 0x13));
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += Timer_Tick;
+            timer.Start();
+        }
+
+        private void Timer_Tick(object sender, object e)
+        {
+            int currentBananas = int.Parse(BananaCount.Text);
+            currentBananas += int.Parse(BananasPerSec.Text);
+            BananaCount.Text = currentBananas.ToString();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -84,7 +97,8 @@ namespace goBanana
 
             options.Visibility = Visibility.Visible;
             info.Visibility = Visibility.Collapsed;
-            game.Visibility = Visibility.Collapsed;
+            game.Opacity = 0.01;
+            MiCanvas.Opacity = 0.01;
             skinsButtons.Visibility = Visibility.Collapsed;
             simiopedia.Visibility = Visibility.Collapsed;
         }
@@ -99,7 +113,8 @@ namespace goBanana
 
             info.Visibility = Visibility.Visible;
             options.Visibility = Visibility.Collapsed;
-            game.Visibility = Visibility.Collapsed;
+            game.Opacity = 0.01;
+            MiCanvas.Opacity = 0.01;
             skinsButtons.Visibility = Visibility.Collapsed;
             simiopedia.Visibility = Visibility.Collapsed;
         }
@@ -112,7 +127,8 @@ namespace goBanana
             SKINS.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xDD, 0x5F));
             GLOSARIO.Background = new SolidColorBrush(Color.FromArgb(0xFE, 0xFE, 0xDD, 0x5F));
 
-            game.Visibility = Visibility.Visible;
+            game.Opacity = 1;
+            MiCanvas.Opacity = 1;
             options.Visibility = Visibility.Collapsed;
             info.Visibility = Visibility.Collapsed;
             skinsButtons.Visibility = Visibility.Collapsed;
@@ -130,7 +146,8 @@ namespace goBanana
             skinsButtons.Visibility = Visibility.Visible;
             options.Visibility = Visibility.Collapsed;
             info.Visibility = Visibility.Collapsed;
-            game.Visibility = Visibility.Collapsed;
+            game.Opacity = 0.01;
+            MiCanvas.Opacity = 0.01;
             simiopedia.Visibility = Visibility.Collapsed;
         }
 
@@ -147,7 +164,8 @@ namespace goBanana
             simiopedia.Visibility = Visibility.Visible;
             options.Visibility = Visibility.Collapsed;
             info.Visibility = Visibility.Collapsed;
-            game.Visibility = Visibility.Collapsed;
+            game.Opacity = 0.01;
+            MiCanvas.Opacity = 0.01;
             skinsButtons.Visibility = Visibility.Collapsed;
         }
 
@@ -190,8 +208,8 @@ namespace goBanana
         {
             music.Pause();
             info.Visibility = Visibility.Collapsed;
-            aboutUs.Visibility = Visibility.Visible;
-            BackButton.Visibility = Visibility.Visible;
+            //aboutUs.Visibility = Visibility.Visible;
+            //BackButton.Visibility = Visibility.Visible;
             JUEGO.Visibility = Visibility.Collapsed;
             SKINS.Visibility = Visibility.Collapsed;
             GLOSARIO.Visibility = Visibility.Collapsed;
@@ -203,8 +221,8 @@ namespace goBanana
         {
             music.Play();
             info.Visibility = Visibility.Visible;
-            aboutUs.Visibility = Visibility.Collapsed;
-            BackButton.Visibility =Visibility.Collapsed;
+            //aboutUs.Visibility = Visibility.Collapsed;
+            //BackButton.Visibility =Visibility.Collapsed;
             JUEGO.Visibility = Visibility.Visible;
             SKINS.Visibility = Visibility.Visible;
             GLOSARIO.Visibility = Visibility.Visible;
@@ -225,12 +243,28 @@ namespace goBanana
 
         private void BuyMonkey_Click(object sender, RoutedEventArgs e)
         {
-            if (int.Parse(MonkeyPrice.Text) <= int.Parse(BananaCount.Text))
+            if (int.Parse(MonkeyPrice.Text) <= int.Parse(BananaCount.Text) && int.Parse(NumberOfMonkeys.Text) < MaxMonkeys)
             {
+                // actualizaciones de numeros
                 NumberOfMonkeys.Text = (int.Parse(NumberOfMonkeys.Text) + 1).ToString();
                 BananaCount.Text = (int.Parse(BananaCount.Text) - int.Parse(MonkeyPrice.Text)).ToString();
-                MonkeyPrice.Text = (int.Parse(MonkeyPrice.Text) + 50).ToString();
+                MonkeyPrice.Text = (int.Parse(MonkeyPrice.Text) + 0).ToString();
                 BananasPerSec.Text = (int.Parse(BananasPerSec.Text) + 10).ToString();
+
+                // creacion de mono en el canvas
+                Image myImage = new Image();
+                BitmapImage bi = new BitmapImage();
+                string s = System.IO.Directory.GetCurrentDirectory() + "\\" + "Assets\\mono1.png";
+                bi.UriSource = new Uri(s);
+                myImage.Source = bi;
+                Random rnd = new Random();
+                int x = rnd.Next(0, (int)MiCanvas.ActualWidth - 50);
+                int y = rnd.Next(-75, (int)MiCanvas.ActualHeight - 125);
+
+                myImage.MaxWidth = 50; // Establece un ancho fijo para la imagen
+                Canvas.SetLeft(myImage, x);
+                Canvas.SetTop(myImage, y);
+                MiCanvas.Children.Add(myImage);
             }
         }
 

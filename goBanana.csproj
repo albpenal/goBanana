@@ -141,6 +141,8 @@
     <Content Include="Assets\flecha.png" />
     <Content Include="Assets\monete.png" />
     <Content Include="Assets\monkey.png" />
+    <Content Include="Assets\mono1.png" />
+    <Content Include="Assets\mono2.png" />
     <Content Include="Assets\music.mp3" />
     <Content Include="Assets\noflecha.png" />
     <Content Include="Assets\orangutan.png" />
